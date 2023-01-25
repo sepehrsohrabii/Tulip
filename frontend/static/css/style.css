@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-UltraLight.woff2") format("woff2"),
+    url("../fonts/Butler-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Medium.woff2") format("woff2"),
+    url("../fonts/Butler-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Light.woff2") format("woff2"),
+    url("../fonts/Butler-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Black.woff2") format("woff2"),
+    url("../fonts/Butler-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Bold.woff2") format("woff2"),
+    url("../fonts/Butler-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Butler-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler.woff2") format("woff2"),
+    url("../fonts/Butler.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Butler", "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.666em;
+  letter-spacing: 0.01em;
+  font-size: 16px;
+  unicode-bidi: isolate;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  background-color: #fffcf4;
+  --primary-color: #b79b7e;
+}
+@media (max-width: 768px) {
+}
+@media (min-width: 769px) {
+  h1 {
+    font-family: "Butler";
+    font-size: 72px;
+    font-weight: lighter;
+  }
+  h2 {
+    font-size: 56px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 24px;
+    font-family: "Poppins";
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+    font-family: "Butler";
+  }
+  .p1 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .p2 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .p3 {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .p4 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .p5 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  transition-duration: 0.1s !important;
+}
+a:hover {
+  color: black;
+  font-weight: 700;
+}
+a:active {
+  color: black;
+  font-weight: 700;
+}
+
+.bg-1 {
+  height: 100%;
+  background-color: rgba(44, 44, 44, 0.5);
+  width: 100%;
+}
+.bg-img-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.height-744 {
+  height: 744px;
+}
+.text-primary-color {
+  color: var(--primary-color);
+}
+
+/* Scroll down icon */
+.scroll-downs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: var(--primary-color);
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
