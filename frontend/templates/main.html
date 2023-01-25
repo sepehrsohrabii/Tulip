@@ -21,7 +21,12 @@
       type="image/x-icon"
       href="{% static 'img/favicon.svg' %}"
     />
-    <link href="https://fonts.cdnfonts.com/css/butler" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/butler"
+      type="text/css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +43,53 @@
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <div class="container">
+        <!-- Logo -->
+        <div class="row">
+          <div class="col text-center mt-5 mb-3">
+            <img
+              src="{% static 'img/logo.svg' %}"
+              alt="Tulip Logo"
+              width="140px"
+            />
+          </div>
+        </div>
+        <!-- SubTitle -->
+        <div class="row border-bottom border-1 pb-4">
+          <div class="col text-center">
+            <h6 class="fw-lighter">You dream it. We can build it.</h6>
+          </div>
+        </div>
+        <!-- Navbar Links -->
+        <div class="row my-5 justify-content-between">
+          <div class="col text-center">
+            <h6><a href="#">Home</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">Stone</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">Precast</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">Landscape</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">Brick</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">Simulation</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">About Us</a></h6>
+          </div>
+          <div class="col text-center">
+            <h6><a href="#">Contact</a></h6>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>{% block main %} {% endblock %}</main>
     <footer></footer>
     <script
