@@ -65,7 +65,8 @@ body {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
-  background-color: #fffcf4;
+  background-color: #fff;
+  transition: all 0.5s ease !important;
   --primary-color: #b79b7e;
 }
 @media (max-width: 768px) {
@@ -78,6 +79,8 @@ body {
   }
   h2 {
     font-size: 56px;
+    font-family: "Butler";
+    font-weight: lighter;
   }
   h3 {
     font-size: 32px;
@@ -95,7 +98,7 @@ body {
   }
   .p1 {
     font-size: 16px;
-    font-weight: 400;
+    font-family: "Poppins";
   }
   .p2 {
     font-size: 14px;
@@ -114,6 +117,7 @@ body {
     font-weight: 500;
   }
 }
+/* RESET */
 h1,
 h2,
 h3,
@@ -137,7 +141,9 @@ a:active {
   color: black;
   font-weight: 700;
 }
-
+.nav-tabs {
+	border: none;
+}
 .bg-1 {
   height: 100%;
   background-color: rgba(44, 44, 44, 0.5);
@@ -146,14 +152,50 @@ a:active {
 .bg-img-cover {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .height-744 {
   height: 744px;
 }
+.height-656 {
+	height: 656px;
+}
+.height-395 {
+  height: 395px;
+}
 .text-primary-color {
   color: var(--primary-color);
 }
+.box1 .box2{
+    display: none;
+}
 
+.box1:hover .box2{
+    display: flex;
+    align-self: end;
+    width: 100%;
+}
+.box2{
+	background-color: var(--primary-color);
+	color: white;
+	font-family: "Butler" !important;
+	height: 76px;
+}
+.nav-button {
+	color: black !important;
+	border-bottom: 5px solid white !important;
+	font-family: "Butler" !important;
+	font-size: 16px !important;
+	font-weight: 300 !important;
+	border-radius: 0 !important;
+	border-top: none !important;
+}
+.nav-button:hover, .nav-button:focus, .nav-button:active, .nav-button.active  {
+	color: black !important;
+	border-bottom: 5px solid var(--primary-color) !important;
+	border-left: 1px solid black !important;
+	border-right: 1px solid black !important;
+}
 /* Scroll down icon */
 .scroll-downs {
   position: absolute;

@@ -32,21 +32,111 @@
     </div>
 </div>
 <!-- 4 Product Section -->
-<div class="d-flex">
-    <div class="row">
-        <div class="col-6 bg-img-cover" style="background-image: url('{% static 'img/cat1.png' %}')">
-            
+<div class="d-flex w-100 flex-column">
+    <div class="row height-395 my-1">
+        <div class="col bg-img-cover box1 d-flex p-0 me-1" style="background-image: url('{% static 'img/cat3.png' %}')">
+            <div class="box2 w-100 align-items-center justify-content-between px-4">
+                <h4 class="fw-bold">Stone</h4>
+                <a class="text-white" href="#"><h4 class="fw-bold"><i class="bi bi-chevron-right"></i></h4></a>
+            </div>
         </div>
-        <div class="col-6 bg-img-cover" style="background-image: url('{% static 'img/cat3.png' %}')"></div>
-    </div>
-    <div class="row">
-        <div class="col-6 bg-img-cover" style="background-image: url('{% static 'img/cat4.png' %}')">
-
+        <div class="col bg-img-cover box1 d-flex p-0" style="background-image: url('{% static 'img/cat1.png' %}')">
+            <div class="box2 w-100 align-items-center justify-content-between px-4">
+                <h4 class="fw-bold">Stone</h4>
+                <a class="text-white" href="#"><h4 class="fw-bold"><i class="bi bi-chevron-right"></i></h4></a>
+            </div>
         </div>
-        <div class="col-6 bg-img-cover" style="background-image: url('{% static 'img/cat2.png' %}')"></div>
     </div>
+    <div class="row height-395 mb-1">
+        <div class="col bg-img-cover box1 d-flex p-0 me-1" style="background-image: url('{% static 'img/cat4.png' %}')">
+            <div class="box2 w-100 align-items-center justify-content-between px-4">
+                <h4 class="fw-bold">Stone</h4>
+                <a class="text-white" href="#"><h4 class="fw-bold"><i class="bi bi-chevron-right"></i></h4></a>
+            </div>
+        </div>
+        <div class="col bg-img-cover box1 d-flex p-0" style="background-image: url('{% static 'img/cat2.png' %}')">
+            <div class="box2 w-100 align-items-center justify-content-between px-4">
+                <h4 class="fw-bold">Stone</h4>
+                <a class="text-white" href="#"><h4 class="fw-bold"><i class="bi bi-chevron-right"></i></h4></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sar Sotun Section -->
+<div class="container my-5 py-5">
+    <div class="row">
+        <div class="col text-center">
+            <img src="{% static 'img/capital.svg' %}" alt="Tulip Head Stone"/>
+        </div>
+    </div>
+    <div class="row justify-content-around mt-5">
+        <div class="col-8 text-center">
+            <h2 class="text-primary-color text-center">Dedicated to Fabricating the Finest<br>Cut Stone Products Possible</h2>
+        </div>
+    </div>
+    <div class="row justify-content-around my-5">
+        <div class="col-2 border-1 border-bottom border-dark"></div>
+    </div>
+    <div class="row justify-content-around mb-5">
+        <div class="col-10">
+            <p class="p1 fw-light">We understand the architectural demands of building residential homes, commercial buildings, and institutional structures. When you are designing cut stone components, you must balance the needs of structural integrity, aesthetics, fit and finish, and cost. We have the experience, the technology, the craftsmanship, and the creativity to develop unique, customized cut stone solutions that can meet your most demanding architectural requirements.</p>
+        </div>
+    </div>
+    <div class="row justify-content-around mt-5 pt-5">
+        <div class="col-10 p-0 border-2 border-dark border">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link nav-button px-5 py-3 active" id="stone-tab" data-bs-toggle="tab" data-bs-target="#stone-tab-pane" type="button" role="tab" aria-controls="stone-tab-pane" aria-selected="true">Stone</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link nav-button px-5 py-3" id="precast-tab" data-bs-toggle="tab" data-bs-target="#precast-tab-pane" type="button" role="tab" aria-controls="precast-tab-pane" aria-selected="false">Precast</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link nav-button px-5 py-3" id="landscape-tab" data-bs-toggle="tab" data-bs-target="#landscape-tab-pane" type="button" role="tab" aria-controls="landscape-tab-pane" aria-selected="false">Landscape</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link nav-button px-5 py-3" id="break-tab" data-bs-toggle="tab" data-bs-target="#break-tab-pane" type="button" role="tab" aria-controls="break-tab-pane" aria-selected="false">Break</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="stone-tab-pane" role="tabpanel" aria-labelledby="stone-tab" tabindex="0">
+                  <div id="carouselExampleIndicators" class="carousel slide">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="{% static 'img/slide1.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="{% static 'img/slide1.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="{% static 'img/slide1.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="precast-tab-pane" role="tabpanel" aria-labelledby="precast-tab" tabindex="0">...</div>
+              <div class="tab-pane fade" id="landscape-tab-pane" role="tabpanel" aria-labelledby="landscape-tab" tabindex="0">...</div>
+              <div class="tab-pane fade" id="break-tab-pane" role="tabpanel" aria-labelledby="break-tab" tabindex="0">...</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Section -->
+<div class="w-100 height-656 mt-5 bg-img-cover" style="background-image: url('{% static 'img/video.png' %}')">
 </div>
 {% endblock %}
 {% block script %}
-
 {% endblock %}
