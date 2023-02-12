@@ -4,10 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Tulip Stone{% endblock %}</title>
-    <!--
-
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -44,55 +41,98 @@
   </head>
 
   <body>
-    <header>
+    <header class="position-absolute w-100 border-bottom border-1 border-white">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-header py-md-3 px-5">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand" href="#">
+              <img
+                      src="{% static 'img/logo.svg' %}"
+                      alt="Tulip Logo"
+                      width="140px"
+              />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+              <div class="navbar-nav w-75 justify-content-end">
+                <a class="col-md-1 text-md-center nav-link active" aria-current="page" href="#">Home</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">Stone</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">Precast</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">Landscape</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">Brick</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">Simulation</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">About Us</a>
+                <a class="col-md-1 text-md-center nav-link" href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main>{% block main %} {% endblock %}</main>
+    <footer class="my-5 pt-5">
       <div class="container">
-        <!-- Logo -->
-        <div class="row">
-          <div class="col text-center mt-5 mb-3">
-            <img
-              src="{% static 'img/logo.svg' %}"
-              alt="Tulip Logo"
-              width="140px"
-            />
+        <div class="row justify-content-between mb-5">
+          <div class="col-5">
+            <p class="p1 fw-500 mb-5">
+              Sign up for the newsletter
+            </p>
+            <form>
+              {% csrf_token %}
+              <input class="input-1" type="email" name="newsletter_email" id="newsletter_email" placeholder="Email Address">
+              <button class="button-2 px-4 ms-2">Sign Up</button>
+            </form>
+          </div>
+          <div class="col-5 d-flex justify-content-between">
+            <div>
+              <p class="p5 mb-3">
+                Office@tulipstone.ca<br>
+                +1 (905) 796 0110
+              </p>
+              <p class="p5">
+                Office@tulipprecast.com<br>
+                +1(647) 534 7755
+              </p>
+            </div>
+            <div>
+              <p class="p5 mb-3">
+                98 Rutherford Rd S, Unit 2C<br>
+                Brampton, ON L6W 3J5, Canada
+              </p>
+              <p class="p5">
+                Monday ~ Saturday 8:00‒17:00
+              </p>
+            </div>
           </div>
         </div>
-        <!-- SubTitle -->
-        <div class="row border-bottom border-1 pb-4">
-          <div class="col text-center">
-            <h6 class="fw-lighter">You dream it. We can build it.</h6>
+        <div class="row justify-content-between mt-5 pt-5">
+          <div class="col-2 align-self-center">
+            <img src="{% static 'img/logo-gold.svg' %}">
+          </div>
+          <div class="col-2 text-primary-color h3 align-self-center mb-0 d-flex justify-content-between">
+            <a href="#">
+              <iconify-icon icon="ph:youtube-logo-thin"></iconify-icon>
+            </a>
+            <a href="#">
+              <iconify-icon icon="ph:facebook-logo-thin"></iconify-icon>
+            </a>
+            <a href="#">
+              <iconify-icon icon="ph:instagram-logo-thin"></iconify-icon>
+            </a>
+            <a href="#">
+              <iconify-icon icon="ph:linkedin-logo-thin"></iconify-icon>
+            </a>
           </div>
         </div>
-        <!-- Navbar Links -->
-        <div class="row my-5 justify-content-between">
-          <div class="col text-center">
-            <h6><a href="#">Home</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">Stone</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">Precast</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">Landscape</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">Brick</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">Simulation</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">About Us</a></h6>
-          </div>
-          <div class="col text-center">
-            <h6><a href="#">Contact</a></h6>
+        <div class="row justify-content-center my-5">
+          <div class="col-8 border-top border-1 text-center">
+            <p class="p6 pt-4 ls-3">
+              Copyright © 2023. All Rights Reserved.
+            </p>
           </div>
         </div>
       </div>
-    </header>
-    <main>{% block main %} {% endblock %}</main>
-    <footer></footer>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -104,6 +144,7 @@
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
     <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
     <script type="text/javascript">
       {% block script %}
