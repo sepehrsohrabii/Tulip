@@ -107,7 +107,7 @@ body {
   }
   .p3 {
     font-size: 14px;
-    font-weight: 800;
+    font-family: "Poppins";
   }
   .p4 {
     font-size: 12px;
@@ -150,22 +150,27 @@ a {
   color: unset !important;
 }
 .navbar-nav a {
-	color: white !important;
+  color: white !important;
 }
-.navbar-nav a:hover, a:active, a.active {
+.navbar-nav a:hover,
+a:active,
+a.active {
   font-weight: 700 !important;
 }
 .nav-tabs {
-	border: none;
+  border: none;
+}
+.border1 {
+  border-bottom: 5px solid var(--primary-color) !important;
 }
 .text-color-primary {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 .bg-color-primary {
-	background-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 .bg-header {
-	background-color: black !important;
+  background-color: black !important;
 }
 .bg-img-cover {
   background-repeat: no-repeat;
@@ -184,48 +189,54 @@ a {
   z-index: -1;
 }
 .button-1 {
-	border: 1px solid white;
-	color: white;
-	background-color: transparent;
-	font-family: "Poppins";
-	font-size: 12px;
-	font-weight: 500;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
 }
 .button-1:hover {
-	background-color: white;
-	color: var(--primary-color) !important;
+  background-color: white;
+  color: var(--primary-color) !important;
 }
 .button-2 {
-	border: 1px solid var(--primary-color);
-	color: white;
-	background-color: var(--primary-color);
-	font-size: 12px;
-	font-weight: 300;
-	font-family: "Poppins";
+  border: 1px solid var(--primary-color);
+  color: white;
+  background-color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Poppins";
 }
 .button-2:hover {
-	background-color: white;
-	color: var(--primary-color) !important;
+  background-color: white;
+  color: var(--primary-color) !important;
 }
 .fw-500 {
-	font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 .fs-24 {
-	font-size: 24px;
+  font-size: 24px;
 }
 .ls-3 {
-	letter-spacing: 3px !important;
+  letter-spacing: 3px !important;
 }
 .w-inherit {
-	width: inherit !important;
+  width: inherit !important;
 }
 .height-999 {
-	height: 999px;
+  height: 999px;
 }
 .height-656 {
-	height: 656px;
+  height: 656px;
+}
+.height-483 {
+  height: 483px;
 }
 .height-395 {
+  height: 395px;
+}
+.height-289 {
   height: 395px;
 }
 .height-136 {
@@ -234,53 +245,60 @@ a {
 .text-primary-color {
   color: var(--primary-color);
 }
-.box1 .box2{
-    display: none;
+.box1 .box2 {
+  display: none;
 }
-.box1:hover .box2{
-    display: flex;
-    align-self: end;
-    width: 100%;
+.box1:hover .box2 {
+  display: flex;
+  align-self: end;
+  width: 100%;
 }
-.box2{
-	background-color: var(--primary-color);
-	color: white;
-	font-family: "Butler" !important;
-	height: 76px;
+.box2 {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Butler" !important;
+  height: 76px;
+}
+.img-object-center {
+  object-position: center center;
 }
 .slider-title {
-	top: 30%;
-	left: 14%;
-	width: 30%;
+  top: 30%;
+  left: 14%;
+  width: 30%;
 }
 .slider-subtitle {
-	top: 70%;
-	left: 20%;
-	width: 15%;
-	font-weight: 500 !important;
+  top: 70%;
+  left: 20%;
+  width: 15%;
+  font-weight: 500 !important;
 }
 .nav-button {
-	color: black !important;
-	border-bottom: 5px solid white !important;
-	font-family: "Butler" !important;
-	font-size: 16px !important;
-	font-weight: 300 !important;
-	border-radius: 0 !important;
-	border-top: none !important;
+  color: black !important;
+  border-bottom: 5px solid white !important;
+  font-family: "Butler" !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  border-radius: 0 !important;
+  border-top: none !important;
 }
-.nav-button:hover, .nav-button:focus, .nav-button:active, .nav-button.active  {
-	color: black !important;
-	border-bottom: 5px solid var(--primary-color) !important;
-	border-left: 1px solid black !important;
-	border-right: 1px solid black !important;
+.nav-button:hover,
+.nav-button:focus,
+.nav-button:active,
+.nav-button.active {
+  color: black !important;
+  border-bottom: 5px solid var(--primary-color) !important;
+  border-left: 1px solid black !important;
+  border-right: 1px solid black !important;
 }
 .input-1 {
-	border-bottom: 0.5px solid black !important;
+  border-bottom: 0.5px solid black !important;
 }
 .input-1:focus-visible {
-    outline: 0px !important;
-    border-bottom: 2px solid var(--primary-color) !important;
+  outline: 0px !important;
+  border-bottom: 2px solid var(--primary-color) !important;
 }
+
 /* Scroll down icon */
 .scroll-downs {
   position: absolute;
@@ -321,5 +339,70 @@ a {
   100% {
     transform: translateY(15px);
     opacity: 0;
+  }
+}
+
+/* Products Image Cards */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 320px;
+}
+.products-card {
+  overflow: hidden;
+  position: relative;
+}
+.products-card .content {
+  z-index: 2;
+  left: 24px;
+  right: 24px;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.7s ease;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  background: var(--primary-color);
+}
+.products-card .image {
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.products-card img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1);
+  object-fit: cover;
+}
+
+.products-card:hover .content {
+  bottom: 0px;
+  color: #fff;
+}
+
+.products-card:hover .image img {
+  transform: scale(1.2);
+}
+
+.products-card .content .title {
+  font-weight: 700;
+  color: #fff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .products-card {
+    width: 50%;
+  }
+  .products-card .content {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .products-card {
+    width: 100%;
   }
 }
