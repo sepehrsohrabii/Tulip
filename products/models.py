@@ -1,8 +1,9 @@
-from django.db import models
 import os
 import random
-from django.urls import reverse
+
 from ckeditor.fields import RichTextField
+from django.db import models
+from django.urls import reverse
 
 
 def get_filename_ext(filepath):
@@ -21,53 +22,65 @@ def upload_image_path(instance, filename):
 
 class MainProduct(models.Model):
     STATUS = (
-        ('True', "Active"),
-        ('False', "Not active"),
+        ("True", "Active"),
+        ("False", "Not active"),
     )
-    status = models.CharField(max_length=50, choices=STATUS, default='True')
+    status = models.CharField(max_length=50, choices=STATUS, default="True")
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
-    slug = models.SlugField(verbose_name='link', unique=True,
-                            allow_unicode=True, max_length=200)
-    header_bg_img = models.ImageField(
-        upload_to=upload_image_path, blank=True, null=True)
-    product_img = models.ImageField(
-        upload_to=upload_image_path, blank=True, null=True)
-    create_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Created at')
-    view_count = models.BigIntegerField(default=0, verbose_name='View Count')
+    slug = models.SlugField(verbose_name="link",
+                            unique=True,
+                            allow_unicode=True,
+                            max_length=200)
+    header_bg_img = models.ImageField(upload_to=upload_image_path,
+                                      blank=True,
+                                      null=True)
+    product_img = models.ImageField(upload_to=upload_image_path,
+                                    blank=True,
+                                    null=True)
+    create_at = models.DateTimeField(auto_now_add=True,
+                                     verbose_name="Created at")
+    view_count = models.BigIntegerField(default=0, verbose_name="View Count")
 
     def get_absolute_url(self):
-        return reverse('main_product_page', kwargs={'slug': self.slug})
+        return reverse("main_product_page", kwargs={"slug": self.slug})
 
     def __str__(self):
-        return '{}-{}'.format(self.title, self.create_at)
+        return "{}-{}".format(self.title, self.create_at)
 
 
 class SubProduct(models.Model):
     STATUS = (
-        ('True', "Active"),
-        ('False', "Not active"),
+        ("True", "Active"),
+        ("False", "Not active"),
     )
-    status = models.CharField(max_length=50, choices=STATUS, default='True')
-    main_product = models.ForeignKey(MainProduct, default=None, on_delete=models.CASCADE)
+    status = models.CharField(max_length=50, choices=STATUS, default="True")
+    main_product = models.ForeignKey(MainProduct,
+                                     default=None,
+                                     on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     description = RichTextField()
-    slug = models.SlugField(verbose_name='link', unique=True,
-                            allow_unicode=True, max_length=200)
-    header_img = models.ImageField(
-        upload_to=upload_image_path, blank=True, null=True)
-    create_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Created at')
-    view_count = models.BigIntegerField(default=0, verbose_name='View Count')
+    slug = models.SlugField(verbose_name="link",
+                            unique=True,
+                            allow_unicode=True,
+                            max_length=200)
+    header_img = models.ImageField(upload_to=upload_image_path,
+                                   blank=True,
+                                   null=True)
+    create_at = models.DateTimeField(auto_now_add=True,
+                                     verbose_name="Created at")
+    view_count = models.BigIntegerField(default=0, verbose_name="View Count")
 
     def get_absolute_url(self):
-        return reverse('sub_product_page', kwargs={'slug': self.slug})
+        return reverse("sub_product_page", kwargs={"slug": self.slug})
 
     def __str__(self):
-        return '{}-{}'.format(self.title, self.create_at)
+        return "{}-{}".format(self.title, self.create_at)
 
 
-class Images (models.Model):
-    sub_product = models.ForeignKey(SubProduct, default=None, related_name='images', on_delete=models.CASCADE)
+class Images(models.Model):
+    sub_product = models.ForeignKey(SubProduct,
+                                    default=None,
+                                    related_name="images",
+                                    on_delete=models.CASCADE)
     image = models.ImageField(upload_to=upload_image_path, blank=True)
