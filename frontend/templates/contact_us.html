@@ -1,8 +1,106 @@
 {% extends 'main.html' %}
 {% load static %}
-{% block title %}Tulip Stone{% endblock %}
+{% block title %}Contact us{% endblock %}
 {% block main %}
+<!-- First Section -->
+<div class="container-fluid py-5">
+	<div class="row py-5 my-5">
+		<div class="col-4 justify-self-end">
+			<div class="d-flex justify-content-start w-50 float-end border-bottom border-1 py-5 ms-5">
+				<div class="align-self-center">
+					<img class="me-4" src="{% static 'img/phone-vector.png' %}">
+				</div>
+				<div>
+					<a href="tel:+1 (647) 534 7755" class="p3 mb-3">+1 (647) 534 7755</a></br>
+					<a href="tel:+1 (905) 796 0110" class="p3">+1 (905) 796 0110</a>
+				</div>
+			</div>
+			<div class="d-flex justify-content-start w-50 float-end border-bottom border-1 py-5 ms-5">
+				<div class="align-self-center">
+					<img class="me-4" src="{% static 'img/email-vector.png' %}">
+				</div>
+				<div>
+					<a href="mailto:Office@tulipstone.ca" class="p3 mb-3">Office@tulipstone.ca</a></br>
+					<a href="mailto:Office@tulipprecast.com" class="p3">Office@tulipprecast.com</a>
+				</div>
+			</div>
+			<div class="d-flex justify-content-start w-50 float-end py-5 ms-5">
+				<div class="">
+					<img class="me-4" src="{% static 'img/location-vector.png' %}">
+				</div>
+				<div>
+					<a href="https://goo.gl/maps/k2veUrsJBceQjvCP8" class="p3 mb-3">98 Rutherford Rd S, Unit 2C</br>Brampton, ON L6W 3J5, Canada</a></br>
+					<p class="bg-color p5 fw-bold text-center mt-3">Monday ~ Saturday 8:00‒17:00</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-8 text-end p-0">
+			<img src="{% static 'img/contact-map.png' %}">
+		</div>
+	</div>
+</div>
+<!-- Image Section -->
+<div class="container-fluid p-0">
+	<img src="{% static 'img/contact-img-section.jpg' %}" width="100%">
+</div>
+<!-- Contact Form -->
+<div class="container my-5 py-5">
+	<div class="row">
+		<div class="col text-center">
+			<h3 class="fw-light pb-4 pt-5">Send us a <span class="fw-bold">Message</span></h3>
+		</div>
+	</div>
+	<div class="row justify-content-between">
+		<div class="col-5 text-center align-self-center">
+			<img src="{% static 'img/contact-vector.png' %}">
+		</div>
+		<div class="col-7 text-center">
+			<form method="post">
+			    {% csrf_token %}
+			    <div class="container mt-5">
+				    <div class="row">
+					    <div class="col text-start">
+						    {{ form.first_name.errors }}</br>
+						    {{ form.first_name.label_tag }}</br>
+						    {{ form.first_name }}
+					    </div>
+					    <div class="col text-start">
+						    {{ form.last_name.errors }}</br>
+						    {{ form.last_name.label_tag }}</br>
+						    {{ form.last_name }}
+					    </div>
+				    </div>
+					<div class="row my-5">
+					    <div class="col text-start">
+						    {{ form.email.errors }}</br>
+						    {{ form.email.label_tag }}</br>
+						    {{ form.email }}
+					    </div>
+					    <div class="col text-start">
+						    {{ form.phone_number.errors }}</br>
+						    {{ form.phone_number.label_tag }}</br>
+						    {{ form.phone_number }}
+					    </div>
+				    </div>
+				    <div class="row">
+					    <div class="col text-start">
+						    {{ form.message.errors }}</br>
+						    {{ form.message.label_tag }}</br>
+						    {{ form.message }}
+					    </div>
 
+				    </div>
+				    <div class="row mt-5">
+					    <div class="col-4 text-start pt-5">
+						    <input class="button-2 py-2 w-100" type="submit" value="Send Message">
+					    </div>
+				    </div>
+			    </div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="container-fluid py-5 mb-5"></div>
 {% endblock %}
 {% block script %}
 {% endblock %}

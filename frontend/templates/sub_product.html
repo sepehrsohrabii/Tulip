@@ -1,10 +1,120 @@
 {% extends 'main.html' %}
 {% load static %}
-{% block title %}Tulip Stone{% endblock %}
+{% block title %}
+Tulip Stone
+{% endblock %}
 {% block main %}
-<div>
-    
+<!-- Header Background -->
+<div class="container-fluid">
+	<div class="row">
+		<img class="p-0" src="{% static 'img/sub-product-header-bg.jpg' %}"/>
+	</div>
 </div>
+<!-- Sub Product Contents -->
+<div class="container">
+	<div class="row mtn-1">
+		<div class="col text-center">
+			<img src="{% static 'img/carving-header.jpg' %}"/>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-2 text-center border1">
+			<h3 class="fw-bolder my-5">Carving</h3>
+		</div>
+	</div>
+	<div class="row justify-content-center mt-5">
+		<div class="col-8 pt-5">
+			<p class="p3 fw-light" align="justify">
+				LIMESTONE CARVING EXPERTS</br>
+				Tulip limestone is a remarkable stone, ranging from a light buff to a bluish-gray in color. It’s ease of
+				workability and capacity to accept and retain fine details, make it a favorite among stone carvers.
+				Today’s carvers are a diverse group of artists. Some are born in to it, still working in the industrial
+				side of the business alongside or in the tradition of their fathers, uncles or brothers who have done
+				the same.</br>
+				ORDERING INFORMATION When placing an order for a specialty carving, we require the following:</br>
+				+ Drawings</br>
+				+ Specifications of any full size layouts that are available</br>
+				+ If the piece will be a replica of an existing carving, photographs and measurements are required
+			</p>
+		</div>
+	</div>
+	<!-- Flickity Carousel -->
+	<div class="row justify-content-center my-5">
+		<div class="col py-5">
+			<!-- Flickity HTML init -->
+			<div class="carousel"
+			  data-flickity='{
+			   "freeScroll": true,
+			   "cellAlign": "left",
+			   "contain": true,
+			   "prevNextButtons": false,
+				"pageDots": false
+			   }'>
+			  <img class="carousel-cell" src="{% static 'img/carving-gal1.jpg' %}">
+			  <img class="carousel-cell" src="{% static 'img/carving-gal2.jpg' %}">
+			  <img class="carousel-cell" src="{% static 'img/carving-gal3.jpg' %}">
+			  <img class="carousel-cell" src="{% static 'img/carving-gal4.jpg' %}">
+			  <img class="carousel-cell" src="{% static 'img/carving-gal1.jpg' %}">
+			  <img class="carousel-cell" src="{% static 'img/carving-gal2.jpg' %}">
+			  <img class="carousel-cell" src="{% static 'img/carving-gal3.jpg' %}">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Contact Form -->
+<div class="container-fluid bg-color-secondary py-5 mb-5">
+	<div class="container my-5 py-5">
+		<div class="row">
+			<div class="col text-center">
+				<h3 class="fw-light pb-5">Send us a <span class="fw-bold">Message</span></h3>
+				<form method="post">
+				    {% csrf_token %}
+				    <div class="container w-75 mt-5">
+					    <div class="row">
+						    <div class="col text-start">
+							    {{ form.first_name.errors }}</br>
+							    {{ form.first_name.label_tag }}</br>
+							    {{ form.first_name }}
+						    </div>
+						    <div class="col text-start">
+							    {{ form.last_name.errors }}</br>
+							    {{ form.last_name.label_tag }}</br>
+							    {{ form.last_name }}
+						    </div>
+					    </div>
+						<div class="row my-5">
+						    <div class="col text-start">
+							    {{ form.email.errors }}</br>
+							    {{ form.email.label_tag }}</br>
+							    {{ form.email }}
+						    </div>
+						    <div class="col text-start">
+							    {{ form.phone_number.errors }}</br>
+							    {{ form.phone_number.label_tag }}</br>
+							    {{ form.phone_number }}
+						    </div>
+					    </div>
+					    <div class="row">
+						    <div class="col text-start">
+							    {{ form.message.errors }}</br>
+							    {{ form.message.label_tag }}</br>
+							    {{ form.message }}
+						    </div>
+
+					    </div>
+					    <div class="row mt-5">
+						    <div class="col-4 text-start pt-5">
+							    <input class="button-2 py-2 w-100" type="submit" value="Send Message">
+						    </div>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid py-5 mb-5"></div>
 {% endblock %}
 {% block script %}
+
 {% endblock %}

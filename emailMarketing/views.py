@@ -5,19 +5,21 @@ from emailMarketing.models import ContactFormModel
 
 
 def contact_page(request):
-    contact_form = ContactForm(
+    form = ContactForm(
         request.POST, auto_id=True)
 
     contact = []
 
     if request.method == 'POST':
-        if contact_form.is_valid():
+        if form.is_valid():
             contact_save = ContactFormModel()
-            contact_form = ContactForm(
+            form = ContactForm(
                 request.POST, instance=contact_save, auto_id=True)
-            contact = contact_form.save(commit=False)
+            contact = form.save(commit=False)
             contact.save()
+    else:
+        form = ContactForm()
 
-    return render(request, 'contact-us.html', {
-        'contact_form': contact_form,
+    return render(request, 'contact_us.html', {
+        'form': form,
     })

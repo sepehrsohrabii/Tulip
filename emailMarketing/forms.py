@@ -14,6 +14,7 @@ class ContactForm(ModelForm):
             'last_name': forms.TextInput(attrs={'placeholder': 'Sohrabi'}),
             'email': forms.TextInput(attrs={'placeholder': 'Enter your email here'}),
             'phone_number': forms.TextInput(attrs={'placeholder': 'Enter your phone number here'}),
+            'message': forms.TextInput(attrs={'placeholder': 'Whe are here to help you ...'}),
         }
         labels = {
             'first_name': ('First name'),
@@ -24,8 +25,12 @@ class ContactForm(ModelForm):
         }
         help_texts = {
             'message': ('Whe are here to help you ...'),
-
         }
+
+    def __init__(self, *args, **kwargs):
+        super(ContactForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'input-1 mt-2 w-100'
 
 
 class SubscriptionForm(ModelForm):

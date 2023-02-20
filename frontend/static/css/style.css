@@ -68,6 +68,9 @@ body {
   background-color: #fff;
   transition: all 0.5s ease !important;
   --primary-color: #b79b7e;
+  --secondary-color: #FFF6EC;
+  --bg-color: #E9E1D8;
+
 }
 @media (max-width: 768px) {
 }
@@ -84,6 +87,7 @@ body {
   }
   h3 {
     font-size: 32px;
+    font-family: "Butler";
   }
   h4 {
     font-size: 24px;
@@ -134,6 +138,29 @@ h6,
 p {
   margin-bottom: 0px;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #828282;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #828282;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #828282;
+  font-size: 12px;
+  font-weight: 300;
+}
+label {
+	font-family: "Poppins";
+	font-size: 16px;
+	font-weight: 300;
+}
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -148,6 +175,9 @@ a {
   font-weight: 300 !important;
   transition-duration: 0.1s !important;
   color: unset !important;
+}
+.mtn-1 {
+	margin-top: -26%;
 }
 .navbar-nav a {
   color: white !important;
@@ -168,6 +198,12 @@ a.active {
 }
 .bg-color-primary {
   background-color: var(--primary-color) !important;
+}
+.bg-color-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.bg-color {
+  background-color: var(--bg-color) !important;
 }
 .bg-header {
   background-color: black !important;
@@ -293,6 +329,7 @@ a.active {
 }
 .input-1 {
   border-bottom: 0.5px solid black !important;
+  background: none !important;
 }
 .input-1:focus-visible {
   outline: 0px !important;
@@ -405,4 +442,23 @@ a.active {
   .products-card {
     width: 100%;
   }
+}
+
+/* filicity carousel */
+.carousel-cell {
+  width: 266px;
+  height: 206px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+  object-fit: cover;
+  object-position: center;
+}
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
