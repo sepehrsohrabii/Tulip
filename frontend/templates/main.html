@@ -58,11 +58,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav w-75 justify-content-end">
                 <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Stone</a>
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Precast</a>
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Landscape</a>
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Brick</a>
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Simulation</a>
+                {% for product in main_products %}
+                <a class="col-md-1 text-md-center nav-link {% if request.path == product.get_absolute_url %} active{% endif %}" href="{{ product.get_absolute_url }}">Stone</a>
+                {% endfor %}
                 <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
                 <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
               </div>

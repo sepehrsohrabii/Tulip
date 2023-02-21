@@ -2,10 +2,16 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from emailMarketing.forms import ContactForm
+from products.models import MainProduct, SubProduct
 
 
-def main_product_view(request):
-    context = {}
+def main_product_view(request, slug):
+    main_product = MainProduct.objects.get(slug=slug)
+    sub_products = SubProduct.objects.filter(main_product=main_product)
+    context = {
+        'main_product': main_product,
+        'sub_products': sub_products
+    }
     return render(request, "main_product.html", context)
 
 
