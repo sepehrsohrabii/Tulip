@@ -9,15 +9,21 @@ def contact_page(request):
 
     contact = []
 
-    if request.method == 'POST':
+    if request.method == "POST":
         if form.is_valid():
             contact_save = ContactFormModel()
-            form = ContactForm(request.POST, instance=contact_save, auto_id=True)
+            form = ContactForm(request.POST,
+                               instance=contact_save,
+                               auto_id=True)
             contact = form.save(commit=False)
             contact.save()
     else:
         form = ContactForm()
 
-    return render(request, 'contact_us.html', {
-        'form': form,
-    })
+    return render(
+        request,
+        "contact_us.html",
+        {
+            "form": form,
+        },
+    )
