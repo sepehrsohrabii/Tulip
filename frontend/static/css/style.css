@@ -70,6 +70,7 @@ body {
   --primary-color: #b79b7e;
   --secondary-color: #FFF6EC;
   --bg-color: #E9E1D8;
+  --gray: #808080;
 
 }
 @media (max-width: 768px) {
@@ -195,6 +196,9 @@ a.active {
 }
 .text-color-primary {
   color: var(--primary-color);
+}
+.text-color-gray {
+	color: var(--gray);
 }
 .bg-color-primary {
   background-color: var(--primary-color) !important;

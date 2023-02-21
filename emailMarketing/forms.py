@@ -38,8 +38,13 @@ class SubscriptionForm(ModelForm):
         model = Subscription
         fields = ('email',)
         widgets = {
-            'email': forms.TextInput(attrs={'placeholder': 'Enter your email here'}),
+            'email': forms.TextInput(attrs={'placeholder': 'Email address'}),
         }
         labels = {
             'email': ('Email address'),
         }
+
+    def __init__(self, *args, **kwargs):
+        super(SubscriptionForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'input-1'

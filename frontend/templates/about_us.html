@@ -2,7 +2,68 @@
 {% load static %}
 {% block title %}About us{% endblock %}
 {% block main %}
-
+<!-- First Section -->
+<div class="container-fluid bg-img-cover p-5" style="background-image: url({% static 'img/about-bg-img.jpg' %})">
+	<div class="row p-5 justify-content-center">
+		<div class="col-8 p-5 text-bg-light d-flex justify-content-center">
+			<div class="w-75 p-5 m-5 text-center">
+				<h2 class="text-color-primary my-5">Why choose Tulip?</h2>
+				<div class="border-1 border-bottom border-dark w-25 my-5 mx-auto"></div>
+				<p class="p1 fw-light my-5" align="justify">
+					We are a highly experienced company that is trained to make your ideas come to life. Our projects
+					range
+					from large-scale luxury housing in the heart of Toronto down to small-scale restorations of any
+					property.
+					Tulip Precast uses the best machinery offered in today’s market and a variety of materials for
+					shaping
+					the concrete into detailed pieces. Our team together has more than 15 years of experience in
+					concrete
+					masonry and is able to maximize concrete size to your liking. We are an Environmentally Friendly
+					Company!
+					We are an eco friendly company that has minimal waste and reuses materials such as Styrofoam that
+					cannot
+					be recycled and we do not use any kind of acid in our products
+					precast concrete has been a more eco friendly option in recent years when it comes to construction.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 3 items section -->
+<div class="container my-5 py-5">
+	<div class="row">
+		<div class="col text-center">
+			<h2 class="text-color-primary my-5">Our Values</h2>
+			<div class="border-1 border-bottom border-dark w-25 my-5 mx-auto"></div>
+		</div>
+	</div>
+	<div class="row justify-content-between my-5">
+		<div class="col-3 text-center">
+			<img src="{% static 'img/about-vector-1.png' %}">
+			<h3 class="my-5">Creative</h3>
+			<p class="p3 fw-light text-color-gray" align="justify">
+				Since its designers come from varied international backgrounds, it thrives on using its work to tell a
+				collective story showcasing its multi-cultural heritage, creative sensibilities and extensive expertise.
+			</p>
+		</div>
+		<div class="col-3 text-center">
+			<img src="{% static 'img/about-vector-2.png' %}">
+			<h3 class="my-5">Innovation</h3>
+			<p class="p3 fw-light text-color-gray" align="justify">
+				Design Determination is a dynamic group of New York City based designers who are passionate about
+				creating inspired interior spaces.
+			</p>
+		</div>
+		<div class="col-3 text-center">
+			<img src="{% static 'img/about-vector-3.png' %}">
+			<h3 class="my-5">Reliability</h3>
+			<p class="p3 fw-light text-color-gray" align="justify">
+				astern Star specializes in New York area luxury development. Its mission is to develop supremely
+				comfortable and contemporary residences in a natural environment.
+			</p>
+		</div>
+	</div>
+</div>
 {% endblock %}
 {% block script %}
 {% endblock %}

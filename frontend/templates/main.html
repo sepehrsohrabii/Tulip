@@ -45,7 +45,7 @@
     <header class="w-100 border-bottom border-1 border-white">
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-header py-md-3 px-5">
           <div class="container-fluid p-0">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'home_page' %}">
               <img
                       src="{% static 'img/logo.svg' %}"
                       alt="Tulip Logo"
@@ -57,14 +57,14 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav w-75 justify-content-end">
-                <a class="col-md-1 text-md-center nav-link active" aria-current="page" href="#">Home</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">Stone</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">Precast</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">Landscape</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">Brick</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">Simulation</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">About Us</a>
-                <a class="col-md-1 text-md-center nav-link" href="#">Contact</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Stone</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Precast</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Landscape</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Brick</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == '' %} active{% endif %}" href="#">Simulation</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
+                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
               </div>
             </div>
           </div>
@@ -78,9 +78,9 @@
             <p class="p1 fw-500 mb-5">
               Sign up for the newsletter
             </p>
-            <form>
+            <form method="post">
               {% csrf_token %}
-              <input class="input-1" type="email" name="newsletter_email" id="newsletter_email" placeholder="Email Address">
+              {{ subscription_form.email }}
               <button class="button-2 px-4 ms-2">Sign Up</button>
             </form>
           </div>
