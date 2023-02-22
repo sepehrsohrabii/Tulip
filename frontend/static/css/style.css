@@ -466,3 +466,10 @@ a.active {
   font-size: 80px;
   color: white;
 }
+
+.sub_product_desc p {
+	font-family: "Poppins";
+	font-size: 14px;
+	font-weight: 300;
+	text-align: justify;
+}

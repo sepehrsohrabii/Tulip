@@ -1,10 +1,12 @@
 import os
 from pathlib import Path
 
+from Tulip.SECRETS import SECRET_KEY
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o0xp$=nx9#iyh3#@gu=*e(019#_)*ec=drdj&6!)n140i!_rk3'
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -61,6 +63,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'Tulip-DataBase',
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -95,3 +103,12 @@ MEDIA_URL = 'static/media_root/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+if DEBUG:
+    SECURE_SSL_REDIRECT = False
+else:
+    SECURE_SSL_REDIRECT = True
+
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True

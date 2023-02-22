@@ -17,11 +17,11 @@
 	</div>
 </div>
 <!-- Gallery -->
-<div class="container-fluid px-5 mt-5 overflow-hidden portfolio">
-	<div class="row g-5 mx-4 my-5">
+<div class="container-fluid px-5 my-5 pb-5 overflow-hidden portfolio">
+	<div class="row g-5 mx-4 my-5 w-100">
 		{% for item in sub_products %}
-		<a href="#"
-		   class="products-card {% if forloop.counter%5 == 0 or forloop.counter%8 == 0 %}col-8{% else %}col-4{% endif %} height-289">
+		<a href="{{ item.get_absolute_url }}"
+		   class="products-card {% if forloop.counter|divisibleby:5 or forloop.counter|divisibleby:8 %}col-8{% else %}col-4{% endif %} height-289">
 			<div class="content justify-content-between px-5">
 				<span class="title">Carving</span>
 				<span class="title d-flex align-items-center"><iconify-icon
@@ -35,6 +35,7 @@
 
 	</div>
 </div>
+
 {% endblock %}
 {% block script %}
 {% endblock %}

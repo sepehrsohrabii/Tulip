@@ -2,11 +2,11 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from emailMarketing.forms import ContactForm
-from products.models import MainProduct, SubProduct
+from products.models import MainProduct, SubProduct, Images
 
 
-def main_product_view(request, slug):
-    main_product = MainProduct.objects.get(slug=slug)
+def main_product_view(request, main_product_slug):
+    main_product = MainProduct.objects.get(slug=main_product_slug)
     sub_products = SubProduct.objects.filter(main_product=main_product)
     context = {
         'main_product': main_product,
@@ -15,7 +15,10 @@ def main_product_view(request, slug):
     return render(request, "main_product.html", context)
 
 
-def sub_product_view(request):
+def sub_product_view(request, main_product_slug, sub_product_slug):
+    main_product = MainProduct.objects.get(slug=main_product_slug)
+    sub_product = SubProduct.objects.get(slug=sub_product_slug, main_product=main_product)
+    gallery = Images.objects.filter(sub_product=sub_product)
     if request.method == "POST":
         # create a form instance and populate it with data from the request:
         form = ContactForm(request.POST)
@@ -31,5 +34,7 @@ def sub_product_view(request):
         form = ContactForm()
     context = {
         "form": form,
+        "sub_product": sub_product,
+        "gallery": gallery
     }
     return render(request, "sub_product.html", context)
