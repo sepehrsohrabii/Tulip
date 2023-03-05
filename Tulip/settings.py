@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-from Tulip.SECRETS import SECRET_KEY
+from Tulip.SECRETS import SECRET_KEY, POSTGRES_DB_PASS
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -56,19 +56,24 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Tulip.wsgi.application'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'djongo',
-#         'NAME': 'Tulip-DataBase',
-#     }
-# }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'tulipstone',
+            'USER': 'tulipstoneuser',
+            'PASSWORD': POSTGRES_DB_PASS,
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -1,8 +1,13 @@
 from django.shortcuts import render
 
+from frontend.models import Settings
+
 
 def home_page(request):
-    context = {}
+    setting, created = Settings.objects.get_or_create(is_active=True)
+    context = {
+        'setting': setting
+    }
     return render(request, "home.html", context)
 
 
