@@ -5,9 +5,7 @@ from frontend.models import Settings
 
 def home_page(request):
     setting, created = Settings.objects.get_or_create(is_active=True)
-    context = {
-        'setting': setting
-    }
+    context = {"setting": setting}
     return render(request, "home.html", context)
 
 
