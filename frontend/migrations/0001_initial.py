@@ -4,21 +4,32 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Settings',
+            name="Settings",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_active', models.BooleanField(default=False)),
-                ('title', models.CharField(max_length=50)),
-                ('slider_video_url', models.URLField(verbose_name='Slider Video URL')),
-                ('view_count', models.BigIntegerField(default=0, verbose_name='View Count')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("is_active", models.BooleanField(default=False)),
+                ("title", models.CharField(max_length=50)),
+                ("slider_video_url",
+                 models.URLField(verbose_name="Slider Video URL")),
+                (
+                    "view_count",
+                    models.BigIntegerField(default=0,
+                                           verbose_name="View Count"),
+                ),
             ],
         ),
     ]
