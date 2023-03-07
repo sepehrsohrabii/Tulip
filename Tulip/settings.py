@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['tulip.sepehrsohrabi.dev', 'localhost', '127.0.0.1', '138.197.138.64']
 
@@ -102,7 +102,7 @@ if DEBUG:
     STATIC_URL = 'static/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 else:
-    STATIC_URL = '/static/'
+    STATIC_URL = 'static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = 'static/media_root/'
