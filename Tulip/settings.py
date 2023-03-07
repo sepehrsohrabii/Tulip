@@ -101,11 +101,13 @@ USE_TZ = True
 if DEBUG:
     STATIC_URL = 'static/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_URL = 'static/media_root/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 else:
-    STATIC_URL = 'static/static/'
+    STATIC_URL = '/home/tulip/Tulip/static'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = 'static/media_root/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
+    MEDIA_URL = '/home/tulip/Tulip/static/media_root/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
