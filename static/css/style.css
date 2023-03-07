@@ -1,3 +1,58 @@
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-UltraLight.woff2") format("woff2"),
+    url("../fonts/Butler-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Medium.woff2") format("woff2"),
+    url("../fonts/Butler-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Light.woff2") format("woff2"),
+    url("../fonts/Butler-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Black.woff2") format("woff2"),
+    url("../fonts/Butler-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-Bold.woff2") format("woff2"),
+    url("../fonts/Butler-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Butler-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler.woff2") format("woff2"),
+    url("../fonts/Butler.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Butler", "Poppins", sans-serif;
   font-weight: 400;
@@ -10,5 +65,411 @@ body {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
-  background-color: #fffcf4;
+  background-color: #fff;
+  transition: all 0.5s ease !important;
+  --primary-color: #b79b7e;
+  --secondary-color: #FFF6EC;
+  --bg-color: #E9E1D8;
+  --gray: #808080;
+
+}
+@media (max-width: 768px) {
+}
+@media (min-width: 769px) {
+  h1 {
+    font-family: "Butler";
+    font-size: 72px;
+    font-weight: lighter;
+  }
+  h2 {
+    font-size: 56px;
+    font-family: "Butler";
+    font-weight: lighter;
+  }
+  h3 {
+    font-size: 32px;
+    font-family: "Butler";
+  }
+  h4 {
+    font-size: 24px;
+    font-family: "Poppins";
+  }
+  h5 {
+    font-size: 18px;
+    font-family: "Poppins";
+  }
+  h6 {
+    font-size: 16px;
+    font-family: "Butler";
+  }
+  .p1 {
+    font-size: 16px;
+    font-family: "Poppins";
+  }
+  .p2 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .p3 {
+    font-size: 14px;
+    font-family: "Poppins";
+  }
+  .p4 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .p5 {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Poppins";
+  }
+  .p6 {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Butler";
+  }
+}
+/* RESET */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #828282;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #828282;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #828282;
+  font-size: 12px;
+  font-weight: 300;
+}
+label {
+	font-family: "Poppins";
+	font-size: 16px;
+	font-weight: 300;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"] {
+  border: 0px;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  font-weight: 300 !important;
+  transition-duration: 0.1s !important;
+  color: unset !important;
+}
+.mtn-1 {
+	margin-top: -26%;
+}
+.navbar-nav a {
+  color: white !important;
+}
+.navbar-nav a:hover,
+a:active,
+a.active {
+  font-weight: 700 !important;
+}
+.nav-tabs {
+  border: none;
+}
+.border1 {
+  border-bottom: 5px solid var(--primary-color) !important;
+}
+.text-color-primary {
+  color: var(--primary-color);
+}
+.text-color-gray {
+	color: var(--gray);
+}
+.bg-color-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-color-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.bg-color {
+  background-color: var(--bg-color) !important;
+}
+.bg-header {
+  background-color: black !important;
+}
+.bg-img-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.bg-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.button-1 {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+}
+.button-1:hover {
+  background-color: white;
+  color: var(--primary-color) !important;
+}
+.button-2 {
+  border: 1px solid var(--primary-color);
+  color: white;
+  background-color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+.button-2:hover {
+  background-color: white;
+  color: var(--primary-color) !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.ls-3 {
+  letter-spacing: 3px !important;
+}
+.w-inherit {
+  width: inherit !important;
+}
+.height-999 {
+  height: 999px;
+}
+.height-656 {
+  height: 656px;
+}
+.height-483 {
+  height: 483px;
+}
+.height-395 {
+  height: 395px;
+}
+.height-289 {
+  height: 395px;
+}
+.height-136 {
+  height: 136px;
+}
+.text-primary-color {
+  color: var(--primary-color);
+}
+.box1 .box2 {
+  display: none;
+}
+.box1:hover .box2 {
+  display: flex;
+  align-self: end;
+  width: 100%;
+}
+.box2 {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Butler" !important;
+  height: 76px;
+}
+.img-object-center {
+  object-position: center center;
+}
+.slider-title {
+  top: 30%;
+  left: 14%;
+  width: 30%;
+}
+.slider-subtitle {
+  top: 70%;
+  left: 20%;
+  width: 15%;
+  font-weight: 500 !important;
+}
+.nav-button {
+  color: black !important;
+  border-bottom: 5px solid white !important;
+  font-family: "Butler" !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  border-radius: 0 !important;
+  border-top: none !important;
+}
+.nav-button:hover,
+.nav-button:focus,
+.nav-button:active,
+.nav-button.active {
+  color: black !important;
+  border-bottom: 5px solid var(--primary-color) !important;
+  border-left: 1px solid black !important;
+  border-right: 1px solid black !important;
+}
+.input-1 {
+  border-bottom: 0.5px solid black !important;
+  background: none !important;
+}
+.input-1:focus-visible {
+  outline: 0px !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
+/* Scroll down icon */
+.scroll-downs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: var(--primary-color);
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Products Image Cards */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 320px;
+}
+.products-card {
+  overflow: hidden;
+  position: relative;
+}
+.products-card .content {
+  z-index: 2;
+  left: 24px;
+  right: 24px;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.7s ease;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  background: var(--primary-color);
+}
+.products-card .image {
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.products-card img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1);
+  object-fit: cover;
+}
+
+.products-card:hover .content {
+  bottom: 0px;
+  color: #fff;
+}
+
+.products-card:hover .image img {
+  transform: scale(1.2);
+}
+
+.products-card .content .title {
+  font-weight: 700;
+  color: #fff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .products-card {
+    width: 50%;
+  }
+  .products-card .content {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .products-card {
+    width: 100%;
+  }
+}
+
+/* filicity carousel */
+.carousel-cell {
+  width: 266px;
+  height: 206px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+  object-fit: cover;
+  object-position: center;
+}
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.sub_product_desc p {
+	font-family: "Poppins";
+	font-size: 14px;
+	font-weight: 300;
+	text-align: justify;
 }
