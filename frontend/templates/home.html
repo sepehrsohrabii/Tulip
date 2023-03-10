@@ -52,7 +52,8 @@
 	<div class="row align-items-center height-999">
 		<div class="col-7 px-0 my-5 py-5">
 			<div class="d-flex justify-content-around mt-5">
-				<h2 class="w-50 text-color-primary">Dedicated to Fabricating the Finest Cut Stone Products Possible</h2>
+				<h2 class="w-50 text-color-primary section-7">Dedicated to Fabricating the Finest Cut Stone Products
+					Possible</h2>
 			</div>
 			<div class="border-1 border-bottom w-50 border-dark my-5 line-one"></div>
 			<div class="d-flex justify-content-around">
@@ -96,7 +97,7 @@
 	</div>
 	<div class="row bg-color-primary justify-content-center py-5">
 		<div class="col-8 my-5">
-			<p class="p1 text-white" align="justify">
+			<p class="p1 text-white section-8" align="justify">
 				We understand the architectural demands of building residential homes, commercial buildings, and
 				institutional structures. When you are designing cut stone components, you must balance the needs of
 				structural integrity, aesthetics, fit and finish, and cost. We have the experience, the technology, the
@@ -107,7 +108,14 @@
 	</div>
 </div>
 <!-- Video Section -->
-<div class="w-100 height-656 bg-img-cover section6" style="background-image: url('{% static 'img/video.png' %}')">
+<div class="w-100 height-656 bg-img-cover section6">
+	{% if setting.bottom_video_url %}
+	<iframe class="w-100 h-100 object-fit-cover"
+	        src="{{ setting.bottom_video_url }}">
+	</iframe>
+	{% else %}
+	<img class="w-100 h-100 object-fit-cover" src="{% static 'img/video.png' %}" alt="Tulip Slider"/>
+	{% endif %}
 </div>
 {% endblock %}
 {% block script %}

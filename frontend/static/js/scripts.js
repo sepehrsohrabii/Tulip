@@ -83,6 +83,26 @@ $(document).ready(function() {
     opacity: 0,
     duration: 1
   });
+  gsap.from(".section-7", {
+    scrollTrigger: {
+      trigger: ".section-7",
+      toggleActions: "play reverse play reverse",
+      scrub: 1,
+    },
+    x: -300,
+    duration: 2
+  });
+  gsap.from(".section-8", {
+    scrollTrigger: {
+      trigger: ".section-8",
+      toggleActions: "play reverse play reverse",
+      scrub: 1,
+      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500",
+    },
+    scale: 0.5,
+    duration: 2
+  });
   gsap.from(".footer-section", {
     scrollTrigger: {
       trigger: ".footer-section",
