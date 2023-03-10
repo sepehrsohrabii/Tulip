@@ -90,5 +90,6 @@ $(document).ready(function() {
     },
     opacity: 0,
     duration: 1
+
   });
 })(jQuery);
