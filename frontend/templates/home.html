@@ -6,8 +6,11 @@
 <div class="vh-100" style="">
 	<div class="h-100 w-100 d-flex">
 		<div class="w-25 bg-color-primary">
-			<h1 class="slider-title position-absolute overflow-hidden text-white">Leaders in Cut Stone Fabrication and
-				Restoration</h1>
+			<h1 class="slider-title position-absolute overflow-hidden text-white">
+				<span>Leaders in Cut</span>
+				<span>Stone Fabrication</span>
+				<span>and Restoration</span>
+			</h1>
 			<h5 class="slider-subtitle fw-normal position-absolute overflow-hidden text-white">over 1000 projects
 				designed manufactured and installed in the heart of Toronto.</h5>
 		</div>
@@ -23,17 +26,17 @@
 	</div>
 </div>
 <!-- Vitualization Section -->
-<div class="container-fluid">
+<div class="container-fluid section-1">
 	<div class="row">
 		<div class="col-3 position-relative">
-			<img class="overflow-hidden" src="{% static 'img/visual.png' %}">
+			<img class="overflow-hidden computer-desk" src="{% static 'img/visual.png' %}">
 		</div>
 		<div class="col-9 bg-color-primary">
 			<div class="container h-100">
 				<div class="row justify-content-end h-100 align-content-center">
-					<div class="col-5 pe-5 me-5 align-items-center">
+					<div class="col-6 pe-5 me-5 align-items-center">
 						<h2 class="text-white">Design Your Project</h2>
-						<p class="p1 fw-light my-4">
+						<p class="p1 fw-light my-4 w-75">
 							Start with one of our sample scenes or upload your own project image and let our Al.
 							technology prepare it so you can design using our products.
 						</p>
@@ -45,13 +48,13 @@
 	</div>
 </div>
 <!-- Section -->
-<div class="container-fluid">
+<div class="container-fluid section-2">
 	<div class="row align-items-center height-999">
 		<div class="col-7 px-0 my-5 py-5">
 			<div class="d-flex justify-content-around mt-5">
 				<h2 class="w-50 text-color-primary">Dedicated to Fabricating the Finest Cut Stone Products Possible</h2>
 			</div>
-			<div class="border-1 border-bottom w-50 border-dark my-5"></div>
+			<div class="border-1 border-bottom w-50 border-dark my-5 line-one"></div>
 			<div class="d-flex justify-content-around">
 				<p class="p1 w-50 fw-light" align="justify">We understand the architectural demands of building
 					residential homes, commercial buildings, and institutional structures. When you are designing cut
@@ -69,25 +72,25 @@
 	</div>
 </div>
 <!-- Brochure Section -->
-<div class="container-fluid tesxt-center p-0">
+<div class="container-fluid tesxt-center p-0 section-3">
 	<img src="{% static 'img/pic2.jpg' %}" width="100%">
 </div>
 <!-- One Sentence Section -->
-<div class="container-fluid tesxt-center my-5 py-5">
+<div class="container-fluid tesxt-center my-5 py-5 section-4">
 	<div class="row">
 		<div class="col-3 align-self-center p-0">
-			<div class="w-100 border-1 border-dark border-bottom"></div>
+			<div class="w-100 border-1 border-dark border-bottom line-two"></div>
 		</div>
 		<div class="col align-self-center px-5">
 			<h2 class="text-primary-color">Dedicated to Fabricating the Finest Cut Stone Products Possible</h2>
 		</div>
 		<div class="col-3 align-self-center p-0">
-			<div class="w-100 border-1 border-dark border-bottom"></div>
+			<div class="w-100 border-1 border-dark border-bottom line-three"></div>
 		</div>
 	</div>
 </div>
 <!-- Section -->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 section-5">
 	<div class="row">
 		<img src="{% static 'img/pic3.jpg' %}">
 	</div>
@@ -104,7 +107,7 @@
 	</div>
 </div>
 <!-- Video Section -->
-<div class="w-100 height-656 bg-img-cover" style="background-image: url('{% static 'img/video.png' %}')">
+<div class="w-100 height-656 bg-img-cover section6" style="background-image: url('{% static 'img/video.png' %}')">
 </div>
 {% endblock %}
 {% block script %}
