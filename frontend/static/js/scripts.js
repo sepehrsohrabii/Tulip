@@ -15,7 +15,7 @@ $(document).ready(function() {
       trigger: ".computer-desk",
       toggleActions: "play reverse play reverse",
       scrub: 1,
-      end: "+=500",
+      end: "+=1000",
     },
     x: -300,
     duration: 2
@@ -26,7 +26,7 @@ $(document).ready(function() {
 	      toggleActions: "play reverse play reverse",
 	      scrub: 1,
 	      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-          end: "+=500",
+          end: "+=1000",
 	    },
 	    x: -300,
 	    duration: 2
@@ -37,7 +37,7 @@ $(document).ready(function() {
       toggleActions: "play reverse play reverse",
       scrub: 1,
       start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=500",
+      end: "+=1000",
     },
     x: +300,
     duration: 2
