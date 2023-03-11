@@ -15,7 +15,6 @@ $(document).ready(function() {
       trigger: ".computer-desk",
       toggleActions: "play reverse play reverse",
       scrub: 1,
-      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
       end: "+=500",
     },
     x: -300,
