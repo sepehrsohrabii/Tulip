@@ -4,6 +4,8 @@ $(document).ready(function() {
 	      trigger: ".line-one",
 	      toggleActions: "play reverse play reverse",
 	      scrub: 1,
+	      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+          end: "+=500",
 	    },
 	    x: -300,
 	    duration: 2
@@ -13,6 +15,8 @@ $(document).ready(function() {
       trigger: ".computer-desk",
       toggleActions: "play reverse play reverse",
       scrub: 1,
+      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500",
     },
     x: -300,
     duration: 2
@@ -22,6 +26,8 @@ $(document).ready(function() {
 	      trigger: ".line-two",
 	      toggleActions: "play reverse play reverse",
 	      scrub: 1,
+	      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+          end: "+=500",
 	    },
 	    x: -300,
 	    duration: 2
@@ -31,6 +37,8 @@ $(document).ready(function() {
       trigger: ".line-three",
       toggleActions: "play reverse play reverse",
       scrub: 1,
+      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500",
     },
     x: +300,
     duration: 2
@@ -88,6 +96,8 @@ $(document).ready(function() {
       trigger: ".section-7",
       toggleActions: "play reverse play reverse",
       scrub: 1,
+      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500",
     },
     x: -300,
     duration: 2
