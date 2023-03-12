@@ -16,9 +16,10 @@
 		</div>
 		<div class="w-75">
 			{% if setting.slider_video_url %}
-			<iframe class="w-100 h-100 object-fit-cover"
-			        src="{{ setting.slider_video_url }}" width="100%" height="100%" allow="autoplay">
-			</iframe>
+			<!-- The video  -->
+			<video src="{{ setting.slider_video_url }}" autoplay loop muted
+			       playsinline
+			       height="100%"></video>
 			{% else %}
 			<img class="w-100 h-100 object-fit-cover" src="{% static 'img/slide2.jpg' %}" alt="Tulip Slider"/>
 			{% endif %}
