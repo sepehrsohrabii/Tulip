@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	$("nav").scroll(function(){
+		$(".navbar").removeClass("py-md-4");
+        $(".navbar").addClass("py-md-3");
+    });
 	gsap.from(".line-one", {
 	    scrollTrigger: {
 	      trigger: ".line-one",
@@ -121,4 +125,4 @@ $(document).ready(function() {
     duration: 1
 
   });
-})(jQuery);
+});

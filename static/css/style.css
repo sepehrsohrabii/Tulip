@@ -256,6 +256,18 @@ a.active {
   background-color: white;
   color: var(--primary-color) !important;
 }
+.button-3 {
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+}
+.button-3:hover {
+  background-color: var(--dark-blue);
+  color: white !important;
+}
 .fw-500 {
   font-weight: 500 !important;
 }
@@ -291,6 +303,9 @@ a.active {
 }
 .text-primary-color {
   color: var(--primary-color);
+}
+.text-dark-blue {
+  color: var(--dark-blue);
 }
 .box1 .box2 {
   display: none;
