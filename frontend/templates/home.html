@@ -5,60 +5,86 @@
 <!-- Slider -->
 <div class="vh-100" style="">
 	<div class="h-100 w-100 d-flex">
-		<div class="w-25 bg-color-primary">
+
+		<div class="w-100">
 			<h1 class="slider-title position-absolute overflow-hidden text-white">
-				<span>Leaders in Cut</span>
-				<span>Stone Fabrication</span>
-				<span>and Restoration</span>
+				Leaders in Cut</br>
+				Stone Fabrication</br>
+				and Restoration
 			</h1>
 			<h5 class="slider-subtitle fw-normal position-absolute overflow-hidden text-white">over 1000 projects
 				designed manufactured and installed in the heart of Toronto.</h5>
-		</div>
-		<div class="w-75">
 			{% if setting.slider_video_url %}
 			<!-- The video  -->
 			<video src="{{ setting.slider_video_url }}" autoplay loop muted
 			       playsinline
-			       height="100%"></video>
+			       width="100%"></video>
 			{% else %}
 			<img class="w-100 h-100 object-fit-cover" src="{% static 'img/slide2.jpg' %}" alt="Tulip Slider"/>
 			{% endif %}
 		</div>
 	</div>
 </div>
+<!-- picture slider -->
+<div class="container-fluid p-0">
+	<div id="carouselExampleCaptions"  class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ setting.img_selider_one.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider one" height="700px">
+      <div class="carousel-caption d-none d-md-block caption-box">
+        <h3>First slide label</h3>
+        <p class="p1 mt-2">Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ setting.img_selider_two.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider two" height="700px">
+      <div class="carousel-caption d-none d-md-block caption-box">
+        <h3>Second slide label</h3>
+        <p class="p1 mt-2">Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ setting.img_selider_three.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider three" height="700px">
+      <div class="carousel-caption d-none d-md-block caption-box">
+        <h3>Third slide label</h3>
+        <p class="p1 mt-2">Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
 <!-- Vitualization Section -->
-<div class="container-fluid section-1">
-	<div class="row">
-		<div class="col-3 position-relative">
-			<img class="overflow-hidden computer-desk" src="{% static 'img/visual.png' %}">
-		</div>
-		<div class="col-9 bg-color-primary">
-			<div class="container h-100">
-				<div class="row justify-content-end h-100 align-content-center">
-					<div class="col-6 pe-5 me-5 align-items-center">
-						<h2 class="text-white">Design Your Project</h2>
-						<p class="p1 fw-light my-4 w-75">
-							Start with one of our sample scenes or upload your own project image and let our Al.
-							technology prepare it so you can design using our products.
-						</p>
-						<button class="button-1 py-2 px-5 position-absolute ls-3">Find More</button>
-					</div>
-				</div>
-			</div>
+<div class="container-fluid section-1 bg-img-cover py-5 height-656" style="background-image: url({% static 'img/section-three.jpg' %})">
+	<div class="row justify-content-end h-100 align-content-center pe-5">
+		<div class="col-4 align-items-center me-5">
+			<h2 class="text-white">Design Your Project</h2>
+			<p class="p1 fw-light my-4 w-75">
+				Start with one of our sample scenes or upload your own project image and let our Al.
+				technology prepare it so you can design using our products.
+			</p>
+			<button class="button-1 py-2 px-5 position-absolute ls-3">Find More</button>
 		</div>
 	</div>
 </div>
 <!-- Section -->
 <div class="container-fluid section-2">
-	<div class="row align-items-center height-999">
+	<div class="row align-items-center height-999 bg-color-dark-blue">
 		<div class="col-7 px-0 my-5 py-5">
 			<div class="d-flex justify-content-around mt-5">
 				<h2 class="w-50 text-color-primary section-7">Dedicated to Fabricating the Finest Cut Stone Products
 					Possible</h2>
 			</div>
-			<div class="border-1 border-bottom w-50 border-dark my-5 line-one"></div>
+			<div class="border-1 border-bottom w-50 border-white my-5 line-one"></div>
 			<div class="d-flex justify-content-around">
-				<p class="p1 w-50 fw-light" align="justify">We understand the architectural demands of building
+				<p class="p1 w-50 fw-light text-white" align="justify">We understand the architectural demands of building
 					residential homes, commercial buildings, and institutional structures. When you are designing cut
 					stone components, you must balance the needs of structural integrity, aesthetics, fit and finish,
 					and cost. We have the experience, the technology, the craftsmanship, and the creativity to develop
@@ -68,7 +94,7 @@
 		</div>
 		<div class="col-5 p-0">
 			<div class="h-100">
-				<img class="object-fit-cover object-position-center w-100 height-999" src="{% static 'img/pic1.jpg' %}">
+				<img class="object-fit-cover object-position-center w-100 height-999" src="{% static 'img/section-four.jpg' %}">
 			</div>
 		</div>
 	</div>
@@ -96,7 +122,7 @@
 	<div class="row">
 		<img src="{% static 'img/pic3.jpg' %}">
 	</div>
-	<div class="row bg-color-primary justify-content-center py-5">
+	<div class="row bg-color-dark-blue justify-content-center py-5">
 		<div class="col-8 my-5">
 			<p class="p1 text-white section-8" align="justify">
 				We understand the architectural demands of building residential homes, commercial buildings, and

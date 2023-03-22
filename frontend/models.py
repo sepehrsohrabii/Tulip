@@ -32,6 +32,9 @@ class Settings(models.Model):
                                    verbose_name='Header Logo', blank=True)
     footer_logo = models.FileField(upload_to=upload_image_path, validators=[validate_file_extension],
                                    verbose_name='Footer Logo', blank=True)
+    img_selider_one = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Slider one', blank=True)
+    img_selider_two = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Slider two', blank=True)
+    img_selider_three = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Slider three', blank=True)
     img_sec_one = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section one', blank=True)
     img_sec_two = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section two', blank=True)
     img_sec_three = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section three', blank=True)
