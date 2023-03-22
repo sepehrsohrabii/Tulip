@@ -26,20 +26,46 @@ def upload_image_path(instance, filename):
 class Settings(models.Model):
     is_active = models.BooleanField(default=False)
     title = models.CharField(max_length=50, blank=True)
-    slider_video_url = models.URLField(max_length=200, verbose_name='Slider Video URL', blank=True)
-    view_count = models.BigIntegerField(default=0, verbose_name='View Count')
-    header_logo = models.FileField(upload_to=upload_image_path, validators=[validate_file_extension],
-                                   verbose_name='Header Logo', blank=True)
-    footer_logo = models.FileField(upload_to=upload_image_path, validators=[validate_file_extension],
-                                   verbose_name='Footer Logo', blank=True)
-    img_selider_one = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Slider one', blank=True)
-    img_selider_two = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Slider two', blank=True)
-    img_selider_three = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Slider three', blank=True)
-    img_sec_one = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section one', blank=True)
-    img_sec_two = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section two', blank=True)
-    img_sec_three = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section three', blank=True)
-    img_sec_four = models.ImageField(upload_to=upload_image_path, verbose_name='IMG Section four', blank=True)
-    bottom_video_url = models.URLField(max_length=200, verbose_name='Bottom Video URL', blank=True)
+    slider_video_url = models.URLField(
+        max_length=200, verbose_name="Slider Video URL", blank=True
+    )
+    view_count = models.BigIntegerField(default=0, verbose_name="View Count")
+    header_logo = models.FileField(
+        upload_to=upload_image_path,
+        validators=[validate_file_extension],
+        verbose_name="Header Logo",
+        blank=True,
+    )
+    footer_logo = models.FileField(
+        upload_to=upload_image_path,
+        validators=[validate_file_extension],
+        verbose_name="Footer Logo",
+        blank=True,
+    )
+    img_selider_one = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Slider one", blank=True
+    )
+    img_selider_two = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Slider two", blank=True
+    )
+    img_selider_three = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Slider three", blank=True
+    )
+    img_sec_one = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Section one", blank=True
+    )
+    img_sec_two = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Section two", blank=True
+    )
+    img_sec_three = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Section three", blank=True
+    )
+    img_sec_four = models.ImageField(
+        upload_to=upload_image_path, verbose_name="IMG Section four", blank=True
+    )
+    bottom_video_url = models.URLField(
+        max_length=200, verbose_name="Bottom Video URL", blank=True
+    )
 
     def save(self, *args, **kwargs):
         if self.is_active:
@@ -48,4 +74,4 @@ class Settings(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return '{}-{}'.format(self.title, self.is_active)
+        return "{}-{}".format(self.title, self.is_active)
