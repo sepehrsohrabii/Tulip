@@ -4,11 +4,7 @@ from pathlib import Path
 from Tulip.SECRETS import SECRET_KEY, POSTGRES_DB_PASS
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = SECRET_KEY
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['tulip.sepehrsohrabi.dev', 'localhost', '127.0.0.1', '138.197.138.64']
