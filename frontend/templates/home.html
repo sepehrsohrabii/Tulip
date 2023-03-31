@@ -78,17 +78,17 @@
 <div class="container py-5 my-5">
 	<div class="row justify-content-between">
 		<div class="col-3 text-center">
-			<img src="{% static 'img/cat1.jpg' %}" width="100%"/>
+			<img src="{% static 'img/stone-.jpg' %}" width="100%"/>
 			<h3 class="mt-4 mb-2">Stone</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
 		<div class="col-3 text-center">
-			<img src="{% static 'img/cat1.jpg' %}" width="100%"/>
+			<img src="{% static 'img/brick-.jpg' %}" width="100%"/>
 			<h3 class="mt-4 mb-2">Break</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
 		<div class="col-3 text-center">
-			<img src="{% static 'img/cat1.jpg' %}" width="100%"/>
+			<img src="{% static 'img/pre-.jpg' %}" width="100%"/>
 			<h3 class="mt-4 mb-2">Precast</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
@@ -159,7 +159,8 @@
 <!-- Video Section -->
 <div class="w-100 height-656 bg-img-cover section-7 overflow-hidden">
 	{% if setting.bottom_video_url %}
-	<video class="object-fit-cover" src="{{ setting.bottom_video_url }}" autoplay loop muted
+	<!-- The video  -->
+	<video src="{{ setting.bottom_video_url }}" autoplay loop muted
 			       playsinline
 			       width="100%"></video>
 	{% else %}
