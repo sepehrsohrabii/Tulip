@@ -43,7 +43,7 @@
 
   <body>
     <header class="w-100 sticky-top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-header py-md-4 px-5">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-header py-md-4 px-5 border2">
           <div class="container-fluid p-0">
             <a class="navbar-brand" href="{% url 'home_page' %}">
               {% if current_view.header_logo %}
@@ -59,12 +59,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav w-75 justify-content-end">
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
+                <a class="col-md-1 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
                 {% for product in main_products %}
-                <a class="col-md-1 text-md-center nav-link {% if request.path == product.get_absolute_url %} active{% endif %}" href="{{ product.get_absolute_url }}">Stone</a>
+                <a class="col-md-1 text-color-primary text-md-center nav-link {% if request.path == product.get_absolute_url %} active{% endif %}" href="{{ product.get_absolute_url }}">Stone</a>
                 {% endfor %}
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
-                <a class="col-md-1 text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
+                <a class="col-md-1 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
+                <a class="col-md-1 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
               </div>
             </div>
           </div>

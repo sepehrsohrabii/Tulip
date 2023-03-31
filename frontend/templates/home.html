@@ -7,7 +7,7 @@
 	<div class="h-100 w-100 d-flex">
 
 		<div class="w-100">
-			<h1 class="slider-title position-absolute overflow-hidden text-white">
+			<h1 class="slider-title position-absolute overflow-hidden text-dark-green">
 				Leaders in Cut</br>
 				Stone Fabrication</br>
 				and Restoration
@@ -27,24 +27,24 @@
 </div>
 <!-- picture slider -->
 <div class="container-fluid p-0">
-	<div id="carouselExampleCaptions"  class="carousel slide" data-bs-ride="carousel">
+	<div id="carouselExampleCaptions"  class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ setting.img_selider_one.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider one" height="700px">
+      <img src="{{ setting.img_selider_one.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider one">
       <div class="carousel-caption d-none d-md-block caption-box">
         <h3>First slide label</h3>
         <p class="p1 mt-2">Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{ setting.img_selider_two.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider two" height="700px">
+      <img src="{{ setting.img_selider_two.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider two">
       <div class="carousel-caption d-none d-md-block caption-box">
         <h3>Second slide label</h3>
         <p class="p1 mt-2">Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{ setting.img_selider_three.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider three" height="700px">
+      <img src="{{ setting.img_selider_three.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider three">
       <div class="carousel-caption d-none d-md-block caption-box">
         <h3>Third slide label</h3>
         <p class="p1 mt-2">Some representative placeholder content for the third slide.</p>
@@ -62,10 +62,10 @@
 </div>
 </div>
 <!-- Vitualization Section -->
-<div class="container-fluid section-1 bg-img-cover py-5 height-656" style="background-image: url({% static 'img/section-three.jpg' %})">
+<div class="container-fluid section-2 bg-img-cover py-5 height-656" style="background-image: url({% static 'img/section-three.jpg' %})">
 	<div class="row justify-content-end h-100 align-content-center pe-5">
 		<div class="col-4 align-items-center me-5">
-			<h2 class="text-dark-blue">Design Your Project</h2>
+			<h2 class="text-dark-green">Design Your Project</h2>
 			<p class="p1 fw-light my-4 w-75">
 				Start with one of our sample scenes or upload your own project image and let our Al.
 				technology prepare it so you can design using our products.
@@ -74,9 +74,29 @@
 		</div>
 	</div>
 </div>
+<!-- 3 Categories -->
+<div class="container py-5 my-5">
+	<div class="row justify-content-between">
+		<div class="col-3 text-center">
+			<img src="{% static 'img/cat1.jpg' %}" width="100%"/>
+			<h3 class="mt-4 mb-2">Stone</h3>
+			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
+		</div>
+		<div class="col-3 text-center">
+			<img src="{% static 'img/cat1.jpg' %}" width="100%"/>
+			<h3 class="mt-4 mb-2">Break</h3>
+			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
+		</div>
+		<div class="col-3 text-center">
+			<img src="{% static 'img/cat1.jpg' %}" width="100%"/>
+			<h3 class="mt-4 mb-2">Precast</h3>
+			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
+		</div>
+	</div>
+</div>
 <!-- Section -->
-<div class="container-fluid section-2">
-	<div class="row align-items-center height-999 bg-color-dark-blue">
+<div class="container-fluid section-3">
+	<div class="row align-items-center height-999 bg-color-dark-green">
 		<div class="col-7 px-0 my-5 py-5">
 			<div class="d-flex justify-content-around mt-5">
 				<h2 class="w-50 text-color-primary section-7">Dedicated to Fabricating the Finest Cut Stone Products
@@ -100,11 +120,11 @@
 	</div>
 </div>
 <!-- Brochure Section -->
-<div class="container-fluid tesxt-center p-0 section-3">
+<div class="container-fluid tesxt-center p-0 section-4">
 	<img src="{% static 'img/pic2.jpg' %}" width="100%">
 </div>
 <!-- One Sentence Section -->
-<div class="container-fluid tesxt-center my-5 py-5 section-4">
+<div class="container-fluid tesxt-center my-5 py-5 section-5">
 	<div class="row">
 		<div class="col-3 align-self-center p-0">
 			<div class="w-100 border-1 border-dark border-bottom line-two"></div>
@@ -117,31 +137,31 @@
 		</div>
 	</div>
 </div>
-<!-- Section -->
-<div class="container-fluid p-0 section-5">
+<!-- Wide Section -->
+<div class="container-fluid p-0 section-6">
 	<div class="row justify-content-center">
-		<div class="col-8">
+		<div class="col-12">
 			<img class="" src="{% static 'img/last-section.jpg' %}" width="100%">
 		</div>
 	</div>
-	<div class="row bg-color-dark-blue justify-content-center py-5">
+	<div class="row bg-color-dark-green justify-content-center py-5">
 		<div class="col-8 my-5">
-			<p class="p1 text-white section-8" align="justify">
+			<h5 class="text-white section-8" align="justify">
 				We understand the architectural demands of building residential homes, commercial buildings, and
 				institutional structures. When you are designing cut stone components, you must balance the needs of
 				structural integrity, aesthetics, fit and finish, and cost. We have the experience, the technology, the
 				craftsmanship, and the creativity to develop unique, customized cut stone solutions that can meet your
 				most demanding architectural requirements.
-			</p>
+			</h5>
 		</div>
 	</div>
 </div>
 <!-- Video Section -->
-<div class="w-100 height-656 bg-img-cover section6">
+<div class="w-100 height-656 bg-img-cover section-7 overflow-hidden">
 	{% if setting.bottom_video_url %}
-	<iframe class="w-100 h-100 object-fit-cover"
-	        src="{{ setting.bottom_video_url }}">
-	</iframe>
+	<video class="object-fit-cover" src="{{ setting.bottom_video_url }}" autoplay loop muted
+			       playsinline
+			       width="100%"></video>
 	{% else %}
 	<img class="w-100 h-100 object-fit-cover" src="{% static 'img/video.png' %}" alt="Tulip Slider"/>
 	{% endif %}
