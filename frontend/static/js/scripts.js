@@ -5,7 +5,7 @@ $(document).ready(function() {
 	      toggleActions: "play reverse play reverse",
 	      scrub: 1,
 	      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-          end: "+=500",
+          end: "+=300",
 	    },
 	    x: -300,
 	    duration: 2
@@ -16,7 +16,7 @@ $(document).ready(function() {
 	      toggleActions: "play reverse play reverse",
 	      scrub: 1,
 	      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-          end: "+=500",
+          end: "+=300",
 	    },
 	    x: -300,
 	    duration: 2
@@ -27,7 +27,7 @@ $(document).ready(function() {
       toggleActions: "play reverse play reverse",
       scrub: 1,
       start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=500",
+      end: "+=300",
     },
     x: +300,
     duration: 2
@@ -105,7 +105,7 @@ $(document).ready(function() {
       toggleActions: "play reverse play reverse",
       scrub: 1,
       start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=500",
+      end: "+=300",
     },
     scale: 0.5,
     duration: 2
