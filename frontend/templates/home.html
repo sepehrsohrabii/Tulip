@@ -27,7 +27,7 @@
 </div>
 <!-- picture slider -->
 <div class="container-fluid p-0">
-	<div id="carouselExampleCaptions"  class="carousel slide">
+	<div id="carouselExampleCaptions"  class="carousel slide"  data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{ setting.img_selider_one.url }}" class="d-block w-100 object-fit-cover object-position-center" alt="image slider one">
@@ -62,9 +62,14 @@
 </div>
 </div>
 <!-- Vitualization Section -->
-<div class="container-fluid section-2 bg-img-cover py-5 height-656" style="background-image: url({% static 'img/section-three.jpg' %})">
-	<div class="row justify-content-end h-100 align-content-center pe-5">
-		<div class="col-4 align-items-center me-5">
+<div class="container-fluid section-2 bg-img-cover py-5 height-656 px-0 bg-white overflow-hidden">
+	<div class="row justify-content-between h-100 align-content-center pe-5">
+		<div class="col align-items-center">
+			<video src="https://drive.google.com/uc?id=1CGdUpjAMnqpaHAgITkxYMOK_uhe2JoXp" autoplay loop muted
+			       playsinline
+			       width="100%"></video>
+		</div>
+		<div class="col-4 align-self-center me-5">
 			<h2 class="text-dark-green">Design Your Project</h2>
 			<p class="p1 fw-light my-4 w-75">
 				Start with one of our sample scenes or upload your own project image and let our Al.
@@ -78,20 +83,20 @@
 <div class="container py-5 my-5">
 	<div class="row justify-content-between">
 		<div class="col text-center">
-			<img src="{% static 'img/stonnew.jpg' %}" width="100%"/>
+			<img src="{% static 'img/stonnew.jpg' %}" width="100%" class="border3"/>
 			<h3 class="mt-4 mb-2">Stone</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
 		<div class="col-1"></div>
 		<div class="col text-center">
-			<img src="{% static 'img/pre-new.jpg' %}" width="100%"/>
+			<img src="{% static 'img/pre-new.jpg' %}" width="100%" class="border3"/>
 			<h3 class="mt-4 mb-2">Precast</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
 
 		<div class="col-1"></div>
 		<div class="col text-center">
-			<img src="{% static 'img/bricknew.jpg' %}" width="100%"/>
+			<img src="{% static 'img/bricknew.jpg' %}" width="100%" class="border3"/>
 			<h3 class="mt-4 mb-2">Brick</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>

@@ -198,6 +198,9 @@ a.active {
 .border2 {
   border-bottom: 2px solid var(--primary-color) !important;
 }
+.border3 {
+  border: 5px solid var(--dark-green) !important;
+}
 .text-color-primary {
   color: var(--primary-color) !important;
 }
