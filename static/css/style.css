@@ -266,15 +266,15 @@ a.active {
   color: var(--primary-color) !important;
 }
 .button-3 {
-  border: 1px solid var(--dark-green);
-  color: var(--dark-green);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   background-color: transparent;
   font-family: "Poppins";
   font-size: 12px;
   font-weight: 500;
 }
 .button-3:hover {
-  background-color: var(--dark-green);
+  background-color: var(--primary-color);
   color: white !important;
 }
 .fw-500 {
