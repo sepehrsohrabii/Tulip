@@ -277,6 +277,9 @@ a.active {
   background-color: var(--primary-color);
   color: white !important;
 }
+.w-60 {
+	width: 60%;
+}
 .fw-500 {
   font-weight: 500 !important;
 }
