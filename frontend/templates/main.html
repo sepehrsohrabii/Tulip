@@ -63,6 +63,11 @@
                 {% for product in main_products %}
                 <a class="col-md text-color-primary text-md-center nav-link {% if request.path == product.get_absolute_url %} active{% endif %}" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
                 {% endfor %}
+                {% if main_products2 %}
+                {% for product in main_products2 %}
+                <a class="col-md text-color-primary text-md-center nav-link {% if request.path == product.get_absolute_url %} active{% endif %}" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                {% endfor %}
+                {% endif %}
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="#">Inspiration</a>
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>

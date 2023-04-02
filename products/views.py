@@ -2,17 +2,33 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from emailMarketing.forms import ContactForm
-from products.models import MainProduct, SubProduct, Images
+from products.models import MainProduct, MainProduct2, SubProduct, Images
 
 
 def main_product_view(request, main_product_slug):
-    main_product = MainProduct.objects.get(slug=main_product_slug)
-    sub_products = SubProduct.objects.filter(main_product=main_product)
+    try:
+        main_product = MainProduct.objects.get(slug=main_product_slug)
+    except MainProduct.DoesNotExist:
+        main_product = None
+
+    try:
+        main_product2 = MainProduct2.objects.get(slug=main_product_slug)
+    except MainProduct2.DoesNotExist:
+        main_product2 = None
+
+    try:
+        sub_products = SubProduct.objects.filter(main_product=main_product)
+    except SubProduct.DoesNotExist:
+        sub_products = None
     context = {
         'main_product': main_product,
+        'main_product2': main_product2,
         'sub_products': sub_products
     }
-    return render(request, "main_product.html", context)
+    if main_product:
+        return render(request, "main_product.html", context)
+    elif main_product2:
+        return render(request, "main_product2.html", context)
 
 
 def sub_product_view(request, main_product_slug, sub_product_slug):

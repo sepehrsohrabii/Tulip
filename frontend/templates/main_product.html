@@ -4,7 +4,7 @@
 {% block main %}
 <!-- Header -->
 <div class="container-fluid bg-img-cover height-483"
-     style="background-image: url({{ main_product.header_bg_img.url }})">
+     style="background-image: url({% static 'img/stone-header-bg.jpg' %})">
 	<div class="row justify-content-center h-100 align-items-center">
 		<div class="col-3 text-center">
 			<img src="{{ main_product.product_img.url }}">

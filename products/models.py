@@ -48,6 +48,31 @@ class MainProduct(models.Model):
         return '{}-{}'.format(self.title, self.create_at)
 
 
+class MainProduct2(models.Model):
+    STATUS = (
+        ('True', "Active"),
+        ('False', "Not active"),
+    )
+    status = models.CharField(max_length=50, choices=STATUS, default='True')
+    title = models.CharField(max_length=50)
+    description = RichTextField()
+    slug = models.SlugField(verbose_name='link', unique=True,
+                            allow_unicode=True, max_length=200)
+    header_bg_img = models.ImageField(
+        upload_to=upload_image_path)
+    product_img = models.ImageField(
+        upload_to=upload_image_path)
+    create_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='Created at')
+    view_count = models.BigIntegerField(default=0, verbose_name='View Count')
+
+    def get_absolute_url(self):
+        return reverse('main_product_view', kwargs={'main_product_slug': self.slug})
+
+    def __str__(self):
+        return '{}-{}'.format(self.title, self.create_at)
+
+
 class SubProduct(models.Model):
     STATUS = (
         ('True', "Active"),
