@@ -58,7 +58,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-              <div class="navbar-nav w-50 justify-content-end">
+              <div class="navbar-nav w-60 justify-content-end">
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
                 {% for product in main_products %}
                 <a class="col-md text-color-primary text-md-center nav-link {% if request.path == product.get_absolute_url %} active{% endif %}" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
