@@ -16,7 +16,7 @@
 		</div>
 	</div>
 </div>
-<!-- Sub Product Contents -->
+<!-- Product Contents -->
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-2 text-center border1">
@@ -28,6 +28,26 @@
 			{{ main_product2.description|safe }}
 		</div>
 	</div>
+	{% if gallery %}
+	<!-- Flickity Carousel -->
+	<div class="row justify-content-center my-5">
+		<div class="col py-5">
+			<!-- Flickity HTML init -->
+			<div class="carousel"
+			     data-flickity='{
+			   "freeScroll": true,
+			   "cellAlign": "left",
+			   "contain": true,
+			   "prevNextButtons": false,
+				"pageDots": false
+			   }'>
+				{% for pic in gallery %}
+				<img class="carousel-cell" src="{{ pic.image.url }}">
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% endif %}
 </div>
 
 {% endblock %}

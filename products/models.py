@@ -102,7 +102,14 @@ class SubProduct(models.Model):
         return '{}-{}'.format(self.title, self.create_at)
 
 
-class Images(models.Model):
+class SubProductGallery(models.Model):
     title = models.CharField(max_length=50)
     sub_product = models.ForeignKey(SubProduct, default=None, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=upload_image_path, blank=True)
+
+
+class MainProductGallery(models.Model):
+    title = models.CharField(max_length=50)
+    main_product = models.ForeignKey(MainProduct2, default=None, related_name='images', on_delete=models.CASCADE,
+                                     null=True)
     image = models.ImageField(upload_to=upload_image_path, blank=True)
