@@ -1,6 +1,12 @@
 from django.contrib import admin
 
-from products.models import MainProduct, MainProduct2, SubProductGallery, SubProduct, MainProductGallery
+from products.models import (
+    MainProduct,
+    MainProduct2,
+    MainProductGallery,
+    SubProduct,
+    SubProductGallery,
+)
 
 
 class SubProductImagesInline(admin.StackedInline):
@@ -12,22 +18,22 @@ class MainProductImagesInline(admin.StackedInline):
 
 
 class SubProductAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'main_product', 'create_at']
-    readonly_fields = ['view_count']
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ["title", "slug", "main_product", "create_at"]
+    readonly_fields = ["view_count"]
+    prepopulated_fields = {"slug": ("title",)}
     inlines = [SubProductImagesInline]
 
 
 class MainProductAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'create_at')
-    readonly_fields = ['view_count']
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ("title", "slug", "create_at")
+    readonly_fields = ["view_count"]
+    prepopulated_fields = {"slug": ("title",)}
 
 
 class MainProduct2Admin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'create_at')
-    readonly_fields = ['view_count']
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ("title", "slug", "create_at")
+    readonly_fields = ["view_count"]
+    prepopulated_fields = {"slug": ("title",)}
     inlines = [MainProductImagesInline]
 
 
