@@ -34,9 +34,9 @@ class MainProduct(models.Model):
     slug = models.SlugField(verbose_name='link', unique=True,
                             allow_unicode=True, max_length=200)
     header_bg_img = models.ImageField(
-        upload_to=upload_image_path)
+        upload_to=upload_image_path, null=True, blank=True)
     product_img = models.ImageField(
-        upload_to=upload_image_path)
+        upload_to=upload_image_path, null=True, blank=True)
     create_at = models.DateTimeField(
         auto_now_add=True, verbose_name='Created at')
     view_count = models.BigIntegerField(default=0, verbose_name='View Count')
@@ -60,9 +60,9 @@ class MainProduct2(models.Model):
     slug = models.SlugField(verbose_name='link', unique=True,
                             allow_unicode=True, max_length=200)
     header_bg_img = models.ImageField(
-        upload_to=upload_image_path)
+        upload_to=upload_image_path, null=True, blank=True)
     product_img = models.ImageField(
-        upload_to=upload_image_path)
+        upload_to=upload_image_path, null=True, blank=True)
     create_at = models.DateTimeField(
         auto_now_add=True, verbose_name='Created at')
     view_count = models.BigIntegerField(default=0, verbose_name='View Count')
@@ -88,7 +88,7 @@ class SubProduct(models.Model):
     title_img = models.ImageField(
         upload_to=upload_image_path)
     header_bg_img = models.ImageField(
-        upload_to=upload_image_path)
+        upload_to=upload_image_path, null=True, blank=True)
     header_img = models.ImageField(
         upload_to=upload_image_path)
     create_at = models.DateTimeField(
