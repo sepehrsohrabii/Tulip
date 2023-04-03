@@ -55,6 +55,7 @@ class MainProduct2(models.Model):
     )
     status = models.CharField(max_length=50, choices=STATUS, default='True')
     title = models.CharField(max_length=50)
+    short_description = models.TextField(default='')
     description = RichTextField()
     slug = models.SlugField(verbose_name='link', unique=True,
                             allow_unicode=True, max_length=200)
