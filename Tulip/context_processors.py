@@ -14,8 +14,8 @@ def global_parameters(request):
             request.POST, instance=subscription_save, auto_id=True)
         subscription = subscription_form.save(commit=False)
         subscription.save()
-    main_products = MainProduct.objects.all()
-    main_products2 = MainProduct2.objects.all()
+    main_products = MainProduct.objects.all().order_by('create_at')
+    main_products2 = MainProduct2.objects.all().order_by('create_at')
     current_view, created = Settings.objects.get_or_create(is_active=True)
     current_view.view_count += 1
     current_view.save()
