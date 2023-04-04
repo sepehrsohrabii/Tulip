@@ -33,7 +33,7 @@
 {% if item.status == 'True' %}
 		{{ item.get_absolute_url }}
 {% else %}
-/coming-soon
+		{% url 'coming_soon' %}
 {% endif %}
 "
 		   class="products-card {% if forloop.counter|divisibleby:5 or forloop.counter|divisibleby:8 %}col-8{% else %}col-4{% endif %} height-289">
