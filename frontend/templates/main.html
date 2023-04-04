@@ -61,10 +61,10 @@
               <div class="navbar-nav w-60 justify-content-end">
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
 
-                <a class="col-md text-color-primary text-md-center nav-link {% if product.get_absolute_url in request.path %} active{% endif %}" href="/products/stone/">Stone</a>
-                <a class="col-md text-color-primary text-md-center nav-link {% if product.get_absolute_url in request.path %} active{% endif %}" href="/products/precast/">Precast</a>
-                <a class="col-md text-color-primary text-md-center nav-link {% if product.get_absolute_url in request.path %} active{% endif %}" href="/products/brick/">Brick</a>
-                <a class="col-md text-color-primary text-md-center nav-link {% if product.get_absolute_url in request.path %} active{% endif %}" href="/products/installation-services/">Installation</a>
+                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/stone/' in request.path %} active{% endif %}" href="/products/stone/">Stone</a>
+                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/precast/' in request.path %} active{% endif %}" href="/products/precast/">Precast</a>
+                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/brick/' in request.path %} active{% endif %}" href="/products/brick/">Brick</a>
+                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/installation-services/' in request.path %} active{% endif %}" href="/products/installation-services/">Installation</a>
 
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'coming_soon' %} active{% endif %}" href="{% url 'coming_soon' %}">Inspiration</a>
                 <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
