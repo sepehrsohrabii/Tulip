@@ -38,7 +38,7 @@ class MainProduct(models.Model):
     product_img = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     create_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Created at')
+        auto_now=True, verbose_name='Created at')
     view_count = models.BigIntegerField(default=0, verbose_name='View Count')
 
     def get_absolute_url(self):
@@ -64,7 +64,7 @@ class MainProduct2(models.Model):
     product_img = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     create_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Created at')
+        auto_now=True, verbose_name='Created at')
     view_count = models.BigIntegerField(default=0, verbose_name='View Count')
 
     def get_absolute_url(self):
@@ -92,7 +92,7 @@ class SubProduct(models.Model):
     header_img = models.ImageField(
         upload_to=upload_image_path)
     create_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Created at')
+        auto_now=True, verbose_name='Created at')
     view_count = models.BigIntegerField(default=0, verbose_name='View Count')
 
     def get_absolute_url(self):
