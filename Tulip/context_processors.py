@@ -5,24 +5,24 @@ from products.models import MainProduct, MainProduct2
 
 
 def global_parameters(request):
-    subscription_form = SubscriptionForm(
-        request.POST, auto_id=True)
+    subscription_form = SubscriptionForm(request.POST, auto_id=True)
     subscription = []
     if subscription_form.is_valid():
         subscription_save = Subscription()
         subscription_form = SubscriptionForm(
-            request.POST, instance=subscription_save, auto_id=True)
+            request.POST, instance=subscription_save, auto_id=True
+        )
         subscription = subscription_form.save(commit=False)
         subscription.save()
-    main_products = MainProduct.objects.all().order_by('create_at')
-    main_products2 = MainProduct2.objects.all().order_by('create_at')
+    main_products = MainProduct.objects.all().order_by("create_at")
+    main_products2 = MainProduct2.objects.all().order_by("create_at")
     current_view, created = Settings.objects.get_or_create(is_active=True)
     current_view.view_count += 1
     current_view.save()
     context = {
-        'subscription_form': subscription_form,
-        'main_products': main_products,
-        'main_products2': main_products2,
-        'current_view': current_view
+        "subscription_form": subscription_form,
+        "main_products": main_products,
+        "main_products2": main_products2,
+        "current_view": current_view,
     }
     return context
