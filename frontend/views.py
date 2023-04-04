@@ -14,3 +14,8 @@ def home_page(request):
 def about_us(request):
     context = {}
     return render(request, "about_us.html", context)
+
+
+def coming_soon(request):
+    context = {}
+    return render(request, "coming_soon.html", context)
