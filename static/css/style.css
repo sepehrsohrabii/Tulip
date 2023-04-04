@@ -483,8 +483,7 @@ a.active {
 
 /* filicity carousel */
 .carousel-cell {
-  width: 266px;
-  height: 206px;
+  height: 300px;
   margin-right: 10px;
   counter-increment: gallery-cell;
   object-fit: cover;
@@ -518,7 +517,4 @@ a.active {
   bottom: 0;
   padding-top: 40px;
   padding-bottom: 40px;
-}
-.carousel-image {
-	height: 300px !important;
 }
