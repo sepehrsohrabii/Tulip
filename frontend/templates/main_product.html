@@ -28,7 +28,7 @@
 <!-- Gallery -->
 <div class="container px-5 my-5 pb-5 overflow-hidden portfolio">
 	{% for item in sub_products %}
-	<div class="row justify-content-between my-5">
+	<div class="row justify-content-between my-5 py-5">
 		{% if forloop.counter|divisibleby:2 %}
 		<div class="col-5 align-self-center text-end">
 			<h2 class="text-dark-green">{{item.title}}</h2>
