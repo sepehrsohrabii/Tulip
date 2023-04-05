@@ -10,8 +10,8 @@ class ContactForm(ModelForm):
         fields = ('first_name', 'last_name', 'email',
                   'phone_number', 'message',)
         widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder': 'Sepehr'}),
-            'last_name': forms.TextInput(attrs={'placeholder': 'Sohrabi'}),
+            'first_name': forms.TextInput(attrs={'placeholder': 'Enter your first name'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Enter your last name'}),
             'email': forms.TextInput(attrs={'placeholder': 'Enter your email here'}),
             'phone_number': forms.TextInput(attrs={'placeholder': 'Enter your phone number here'}),
             'message': forms.TextInput(attrs={'placeholder': 'Whe are here to help you ...'}),

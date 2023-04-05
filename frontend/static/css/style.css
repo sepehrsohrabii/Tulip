@@ -277,6 +277,18 @@ a.active {
   background-color: var(--primary-color);
   color: white !important;
 }
+.button-4 {
+  border: 1px solid var(--dark-green);
+  color: var(--dark-green);
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+}
+.button-4:hover {
+  background-color: var(--dark-green);
+  color: white !important;
+}
 .w-60 {
 	width: 60%;
 }
@@ -416,7 +428,7 @@ a.active {
   }
 }
 
-/* Products Image Cards */
+/* Products Image Cards
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -480,6 +492,7 @@ a.active {
     width: 100%;
   }
 }
+*/
 
 /* filicity carousel */
 .carousel-cell {

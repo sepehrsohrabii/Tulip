@@ -26,29 +26,46 @@
 	</div>
 </div>
 <!-- Gallery -->
-<div class="container-fluid px-5 my-5 pb-5 overflow-hidden portfolio">
-	<div class="row g-5 mx-4 my-5 w-100">
-		{% for item in sub_products %}
-		<a href="
-{% if item.status == 'True' %}
-		{{ item.get_absolute_url }}
-{% else %}
-		{% url 'coming_soon' %}
-{% endif %}
-"
-		   class="products-card {% if forloop.counter|divisibleby:5 or forloop.counter|divisibleby:8 %}col-8{% else %}col-4{% endif %} height-289">
-			<div class="content justify-content-between px-5">
-				<span class="title">{{item.title}}</span>
-				<span class="title d-flex align-items-center"><iconify-icon
-						icon="material-symbols:arrow-forward-ios-sharp"></iconify-icon></span>
-			</div>
-			<div class="image">
-				<img class="w-100 h-100 object-fit-cover" src="{{ item.title_img.url }}">
-			</div>
-		</a>
-		{% endfor %}
-
+<div class="container px-5 my-5 pb-5 overflow-hidden portfolio">
+	{% for item in sub_products %}
+	<div class="row justify-content-between my-5">
+		{% if forloop.counter|divisibleby:2 %}
+		<div class="col-5 align-items-center">
+			<h3>{{item.title}}</h3>
+			<p class="p1 my-4">{{short_description}}</p>
+			<a class="button-4 py-2 px-5 ls-3" href="
+					{% if item.status == 'True' %}
+							{{ item.get_absolute_url }}
+					{% else %}
+							{% url 'coming_soon' %}
+					{% endif %}
+					">
+				Read More
+			</a>
+		</div>
+		<div class="col-5 align-items-center">
+			<img class="w-100 h-100 object-fit-cover height-289" src="{{ item.title_img.url }}">
+		</div>
+		{% else %}
+		<div class="col-5 align-items-center">
+			<img class="w-100 h-100 object-fit-cover height-289" src="{{ item.title_img.url }}">
+		</div>
+		<div class="col-5 align-items-center">
+			<h3>{{item.title}}</h3>
+			<p class="p1 my-4">{{short_description}}</p>
+			<a class="button-4 py-2 px-5 ls-3" href="
+					{% if item.status == 'True' %}
+							{{ item.get_absolute_url }}
+					{% else %}
+							{% url 'coming_soon' %}
+					{% endif %}
+					">
+				Read More
+			</a>
+		</div>
+		{% endif %}
 	</div>
+	{% endfor %}
 </div>
 
 {% endblock %}

@@ -82,6 +82,7 @@ class SubProduct(models.Model):
     status = models.CharField(max_length=50, choices=STATUS, default='True')
     main_product = models.ForeignKey(MainProduct, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
+    short_description = models.TextField(default='')
     description = RichTextField()
     slug = models.SlugField(verbose_name='link', unique=True,
                             allow_unicode=True, max_length=200)
