@@ -31,7 +31,7 @@
 	<div class="row justify-content-between my-5">
 		{% if forloop.counter|divisibleby:2 %}
 		<div class="col-5 align-items-center">
-			<h3>{{item.title}}</h3>
+			<h3 class="text-dark-green">{{item.title}}</h3>
 			<p class="p1 my-4">{{short_description}}</p>
 			<a class="button-4 py-2 px-5 ls-3" href="
 					{% if item.status == 'True' %}
@@ -44,15 +44,15 @@
 			</a>
 		</div>
 		<div class="col-5 align-items-center">
-			<img class="w-100 h-100 object-fit-cover height-289" src="{{ item.title_img.url }}">
+			<img class="w-100 object-fit-cover" src="{{ item.title_img.url }}" height="395px">
 		</div>
 		{% else %}
 		<div class="col-5 align-items-center">
-			<img class="w-100 h-100 object-fit-cover height-289" src="{{ item.title_img.url }}">
+			<img class="w-100 object-fit-cover" src="{{ item.title_img.url }}" height="395px">
 		</div>
 		<div class="col-5 align-items-center">
-			<h3>{{item.title}}</h3>
-			<p class="p1 my-4">{{short_description}}</p>
+			<h3 class="text-dark-green">{{item.title}}</h3>
+			<p class="p1 my-4">{{item.short_description}}</p>
 			<a class="button-4 py-2 px-5 ls-3" href="
 					{% if item.status == 'True' %}
 							{{ item.get_absolute_url }}
