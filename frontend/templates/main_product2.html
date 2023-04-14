@@ -10,15 +10,15 @@
      style="background-image: url({% static 'img/stone-header-bg.jpg' %})"
      {% endif %}
 >
-	<div class="row justify-content-center h-100 align-items-center">
-		<div class="col-3 text-center">
+	<div class="row justify-content-center h-100 align-items-center py-5 py-md-0">
+		<div class="col-12 col-md-3 text-center">
 			{% if main_product2.product_img %}
 			<img src="{{ main_product2.product_img.url }}" height="165px">
 			{% else %}
 			<img src="{% static 'img/stone-icon.png' %}" height="165px">
 			{% endif %}
 		</div>
-		<div class="col-4">
+		<div class="col-10 col-md-4 py-5 py-md-0">
 			<h3 class="text-uppercase fw-light">{{ main_product2.title }}</h3>
 			<div class="w-25 border1 mt-3 mb-4"></div>
 			<p class="p3 fw-light">{{ main_product2.short_description }}</p>
@@ -28,12 +28,12 @@
 <!-- Product Contents -->
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-2 text-center border1">
+		<div class="col-5 col-md-2 text-center border1">
 			<h3 class="fw-bolder mt-5 mb-4">{{ main_product2.title }}</h3>
 		</div>
 	</div>
 	<div class="row justify-content-center my-5">
-		<div class="col-9 pt-5 sub_product_desc">
+		<div class="col-12 col-md-9 pt-5 sub_product_desc">
 			{{ main_product2.description|safe }}
 		</div>
 	</div>
