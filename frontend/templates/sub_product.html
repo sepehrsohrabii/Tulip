@@ -22,12 +22,12 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-		<div class="col-2 text-center border1">
+		<div class="col-6 col-md-2 text-center border1">
 			<h3 class="fw-bolder mt-5 mb-4">{{ sub_product.title }}</h3>
 		</div>
 	</div>
 	<div class="row justify-content-center mt-5">
-		<div class="col-9 pt-5 sub_product_desc">
+		<div class="col-11 col-md-9 pt-5 sub_product_desc">
 			{{ sub_product.description|safe }}
 		</div>
 	</div>
@@ -57,7 +57,7 @@
 				<h3 class="fw-light pb-5">Send us a <span class="fw-bold">Message</span></h3>
 				<form method="post">
 				    {% csrf_token %}
-				    <div class="container w-75 mt-5">
+				    <div class="container w-75 mt-5 w-mb-100">
 					    <div class="row">
 						    <div class="col text-start">
 							    {{ form.first_name.errors }}</br>
@@ -91,7 +91,7 @@
 
 					    </div>
 					    <div class="row mt-5">
-						    <div class="col-4 text-start pt-5">
+						    <div class="col-12 col-md-4 text-start pt-5">
 							    <input class="button-2 py-2 w-100" type="submit" value="Send Message">
 						    </div>
 					    </div>

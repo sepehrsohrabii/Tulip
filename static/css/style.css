@@ -188,6 +188,14 @@ body {
     width: 100%;
     height: auto;
   }
+  /* filicity carousel */
+	.carousel-cell {
+	  height: 150px;
+	  margin-right: 10px;
+	  counter-increment: gallery-cell;
+	  object-fit: cover;
+	  object-position: center;
+	}
 }
 @media (min-width: 769px) {
 	/* DESKTOP */
@@ -274,6 +282,14 @@ body {
 	}
 	.height-136 {
 	  height: 136px;
+	}
+	/* filicity carousel */
+	.carousel-cell {
+	  height: 300px;
+	  margin-right: 10px;
+	  counter-increment: gallery-cell;
+	  object-fit: cover;
+	  object-position: center;
 	}
 }
 /* RESET */
@@ -617,14 +633,7 @@ a.active {
 }
 */
 
-/* filicity carousel */
-.carousel-cell {
-  height: 300px;
-  margin-right: 10px;
-  counter-increment: gallery-cell;
-  object-fit: cover;
-  object-position: center;
-}
+
 /* cell number */
 .carousel-cell:before {
   display: block;
