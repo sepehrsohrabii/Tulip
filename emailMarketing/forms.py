@@ -47,4 +47,4 @@ class SubscriptionForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(SubscriptionForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'input-1'
+            visible.field.widget.attrs['class'] = 'input-1 col-8 col-md-6'

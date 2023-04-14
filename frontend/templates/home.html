@@ -5,7 +5,6 @@
 <!-- Slider -->
 <div class="vh-100" style="">
 	<div class="h-100 w-100 d-flex">
-
 		<div class="w-100">
 			<h1 class="slider-title position-absolute overflow-hidden text-dark-green">
 				Leaders in Cut</br>
@@ -16,9 +15,9 @@
 				designed manufactured and installed in the heart of Toronto.</h5>
 			{% if setting.slider_video_url %}
 			<!-- The video  -->
-			<video src="{{ setting.slider_video_url }}" autoplay loop muted
+			<video class="object-fit-cover" src="{{ setting.slider_video_url }}" autoplay loop muted
 			       playsinline
-			       width="100%"></video>
+			       width="100%" height="100%"></video>
 			{% else %}
 			<img class="w-100 h-100 object-fit-cover" src="{% static 'img/slide2.jpg' %}" alt="Tulip Slider"/>
 			{% endif %}
@@ -62,40 +61,40 @@
 </div>
 </div>
 <!-- Vitualization Section -->
-<div class="container-fluid section-2 bg-img-cover py-5 height-656 px-0 bg-color-dark-green overflow-hidden">
-	<div class="row justify-content-between h-100 align-content-center pe-5">
-		<div class="col align-items-center">
+<div class="container-fluid section-2 bg-img-cover py-md-5 height-656 px-0 bg-color-dark-green overflow-hidden">
+	<div class="row justify-content-between h-100 align-content-center pe-md-5">
+		<div class="col-12 col-md align-items-center p-md-0 p-3">
 			<video src="https://drive.google.com/uc?id=1CGdUpjAMnqpaHAgITkxYMOK_uhe2JoXp" autoplay loop muted
 			       playsinline
 			       width="100%"></video>
 		</div>
-		<div class="col-4 align-self-center me-5">
+		<div class="col-12 col-md-4 align-self-center me-md-5 py-md-0 py-5 px-4">
 			<h2 class="text-primary-color">Design Your Project</h2>
-			<p class="p1 fw-light my-4 w-75 text-white">
+			<p class="p1 fw-light my-4 w-75 text-white w-mb-100" align="justify">
 				Start with one of our sample scenes or upload your own project image and let our Al.
 				technology prepare it so you can design using our products.
 			</p>
-			<button class="button-3 py-2 px-5 position-absolute ls-3">Find More</button>
+			<button class="button-3 py-2 px-5 ls-3">Find More</button>
 		</div>
 	</div>
 </div>
 <!-- 3 Categories -->
 <div class="container py-5 my-5">
 	<div class="row justify-content-between">
-		<div class="col text-center">
+		<div class="col-12 col-md text-center">
 			<img src="{% static 'img/stonnew.jpg' %}" width="100%" class="border3"/>
 			<h3 class="mt-4 mb-2">Stone</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
-		<div class="col-1"></div>
-		<div class="col text-center">
+		<div class="col-md-1"></div>
+		<div class="col-12 col-md text-center my-5 my-md-0 py-4 py-md-0">
 			<img src="{% static 'img/pre-new.jpg' %}" width="100%" class="border3"/>
 			<h3 class="mt-4 mb-2">Precast</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
 		</div>
 
-		<div class="col-1"></div>
-		<div class="col text-center">
+		<div class="col-md-1"></div>
+		<div class="col-12 col-md text-center">
 			<img src="{% static 'img/bricknew.jpg' %}" width="100%" class="border3"/>
 			<h3 class="mt-4 mb-2">Brick</h3>
 			<p class="p1" align="justify">Our cut stone product production capabilities are endless. Every aspect of our operation is designed to maintain high quality throughout.</p>
@@ -104,15 +103,15 @@
 </div>
 <!-- Section -->
 <div class="container-fluid section-3">
-	<div class="row align-items-center height-999 bg-color-dark-green">
-		<div class="col-7 px-0 my-5 py-5">
-			<div class="d-flex justify-content-around mt-5">
-				<h2 class="w-50 text-color-primary section-7">Dedicated to Fabricating the Finest Cut Stone Products
+	<div class="row align-items-center height-999 bg-color-dark-green flex-wrap-reverse flex-md-wrap">
+		<div class="col-12 col-md-7 px-0 my-md-5 py-5">
+			<div class="d-flex justify-content-around mt-md-5">
+				<h2 class="w-50 text-color-primary section-7 w-mb-100 px-5 px-md-0">Dedicated to Fabricating the Finest Cut Stone Products
 					Possible</h2>
 			</div>
 			<div class="border-1 border-bottom w-50 border-white my-5 line-one"></div>
 			<div class="d-flex justify-content-around">
-				<p class="p1 w-50 fw-light text-white" align="justify">We understand the architectural demands of building
+				<p class="p1 w-50 fw-light text-white w-mb-100 px-5 px-md-0" align="justify">We understand the architectural demands of building
 					residential homes, commercial buildings, and institutional structures. When you are designing cut
 					stone components, you must balance the needs of structural integrity, aesthetics, fit and finish,
 					and cost. We have the experience, the technology, the craftsmanship, and the creativity to develop
@@ -120,7 +119,7 @@
 					requirements.</p>
 			</div>
 		</div>
-		<div class="col-5 p-0">
+		<div class="col-12 col-md-5 p-0">
 			<div class="h-100">
 				<img class="object-fit-cover object-position-center w-100 height-999" src="{% static 'img/section-four.jpg' %}">
 			</div>
@@ -132,28 +131,28 @@
 	<img src="{% static 'img/2624.jpg' %}" width="100%">
 </div>
 <!-- One Sentence Section -->
-<div class="container-fluid tesxt-center my-5 py-5 section-5">
-	<div class="row">
-		<div class="col-3 align-self-center p-0">
+<div class="container-fluid tesxt-center my-5 py-5 section-5 overflow-hidden">
+	<div class="row justify-content-center">
+		<div class="col-3 col-md-3 align-self-center p-0">
 			<div class="w-100 border-1 border-dark border-bottom line-two"></div>
 		</div>
-		<div class="col align-self-center px-5">
-			<h2 class="text-primary-color">Dedicated to Fabricating the Finest Cut Stone Products Possible</h2>
+		<div class="col-12 col-md align-self-center px-5 my-5 my-md-0">
+			<h2 class="text-primary-color text-md-start text-center">Dedicated to Fabricating the Finest Cut Stone Products Possible</h2>
 		</div>
-		<div class="col-3 align-self-center p-0">
+		<div class="col-3 col-md-3 align-self-center p-0">
 			<div class="w-100 border-1 border-dark border-bottom line-three"></div>
 		</div>
 	</div>
 </div>
-<!-- Wide Section -->
+<!-- Wide Picture Section -->
 <div class="container-fluid p-0 section-6">
 	<div class="row justify-content-center">
-		<div class="col-12">
+		<div class="col-12 px-0">
 			<img class="" src="{% static 'img/last-section.jpg' %}" width="100%">
 		</div>
 	</div>
 	<div class="row bg-color-dark-green justify-content-center py-5">
-		<div class="col-8 my-5">
+		<div class="col-11 col-md-8 my-5">
 			<h4 class="fw-light text-white section-8" align="justify">
 				We understand the architectural demands of building residential homes, commercial buildings, and
 				institutional structures. When you are designing cut stone components, you must balance the needs of
