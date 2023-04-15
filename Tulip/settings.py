@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY
 DEBUG = False
 
-ALLOWED_HOSTS = ['tulip.sepehrsohrabi.dev',
+ALLOWED_HOSTS = ['tulipstone.ca',
                  'localhost', '127.0.0.1', '138.197.138.64']
 
 INSTALLED_APPS = [
