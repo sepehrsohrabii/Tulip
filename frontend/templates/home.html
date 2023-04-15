@@ -13,14 +13,10 @@
 			</h1>
 			<h5 class="slider-subtitle fw-normal position-absolute overflow-hidden text-white">over 1000 projects
 				designed manufactured and installed in the heart of Toronto.</h5>
-			{% if setting.slider_video_url %}
 			<!-- The video  -->
-			<video class="object-fit-cover" src="{{ setting.slider_video_url }}" autoplay loop muted
+			<video class="object-fit-cover" src="{% static 'video/first.mp4' %}" autoplay loop muted
 			       playsinline
 			       width="100%" height="100%"></video>
-			{% else %}
-			<img class="w-100 h-100 object-fit-cover" src="{% static 'img/slide2.jpg' %}" alt="Tulip Slider"/>
-			{% endif %}
 		</div>
 	</div>
 </div>
@@ -64,9 +60,9 @@
 <div class="container-fluid section-2 bg-img-cover py-md-5 height-656 px-0 bg-color-dark-green overflow-hidden">
 	<div class="row justify-content-between h-100 align-content-center pe-md-5">
 		<div class="col-12 col-md align-items-center p-md-0 p-3">
-			<video src="https://drive.google.com/uc?id=1CGdUpjAMnqpaHAgITkxYMOK_uhe2JoXp" autoplay loop muted
+			<video src="{% static 'video/second.mp4' %}" autoplay loop muted
 			       playsinline
-			       width="100%"></video>
+			       width="100%" height="100%"></video>
 		</div>
 		<div class="col-12 col-md-4 align-self-center me-md-5 py-md-0 py-5 px-4">
 			<h2 class="text-primary-color">Design Your Project</h2>
@@ -165,14 +161,10 @@
 </div>
 <!-- Video Section -->
 <div class="w-100 height-656 bg-img-cover section-7 overflow-hidden">
-	{% if setting.bottom_video_url %}
 	<!-- The video  -->
-	<video src="{{ setting.bottom_video_url }}" autoplay loop muted
+	<video src="{% static 'video/third.mp4' %}" autoplay loop muted
 			       playsinline
 			       width="100%"></video>
-	{% else %}
-	<img class="w-100 h-100 object-fit-cover" src="{% static 'img/video.png' %}" alt="Tulip Slider"/>
-	{% endif %}
 </div>
 {% endblock %}
 {% block script %}
