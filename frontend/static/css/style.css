@@ -196,9 +196,6 @@ body {
 	  object-fit: cover;
 	  object-position: center;
 	}
-  vh-90 {
-    height: 90vh !important;
-  }
 }
 @media (min-width: 769px) {
 	/* DESKTOP */
@@ -345,6 +342,9 @@ a {
   font-weight: 300 !important;
   transition-duration: 0.1s !important;
   color: unset !important;
+}
+.vh-90 {
+	height: 90vh !important;
 }
 .mtn-1 {
   margin-top: -26%;
