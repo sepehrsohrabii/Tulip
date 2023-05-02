@@ -336,7 +336,9 @@ input[type="url"] {
   border: 0px;
   font-family: "Poppins";
 }
-
+header {
+	z-index: 10;
+}
 a {
   text-decoration: none;
   font-weight: 300 !important;
