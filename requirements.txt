@@ -11,3 +11,4 @@ PySocks==1.7.1
 python-dotenv==0.21.1
 sqlparse==0.2.4
 tomli==2.0.1
+psycopg2-binary
