@@ -115,7 +115,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if DEBUG:
     STATIC_URL = 'static/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
