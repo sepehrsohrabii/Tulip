@@ -1,20 +1,18 @@
 import os
-import sys
 from pathlib import Path
 
-import dj_database_url
-from django.core.management.utils import get_random_secret_key
+from Tulip.SECRETS import SECRET_KEY, DB_NAME, DB_PASSWORD, DB_USER
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-# SECRET_KEY = SECRET_KEY
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
-# DEBUG = False
-DEBUG = os.getenv("DEBUG", "False") == "True"
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
-# ALLOWED_HOSTS = ['tulipstone.ca',
-#                  'localhost', '127.0.0.1', '138.197.138.64']
+DEBUG = False
+
+if DEBUG:
+    SECRET_KEY = 'sepisepisepisepisepisepisepisepisep'
+else:
+    SECRET_KEY = SECRET_KEY
+
+ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -59,37 +57,23 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Tulip.wsgi.application'
-# if DEBUG:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'tulipstone',
-#             'USER': 'tulipstoneuser',
-#             'PASSWORD': POSTGRES_DB_PASS,
-#             'HOST': 'localhost',
-#             'PORT': '',
-#         }
-#     }
-
-if DEVELOPMENT_MODE is True:
+if DEBUG:
     DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    if os.getenv("DATABASE_URL", None) is None:
-        raise Exception("DATABASE_URL environment variable not defined")
+else:
     DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': DB_NAME,
+            'USER': DB_USER,
+            'PASSWORD': DB_PASSWORD,
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
 
 AUTH_PASSWORD_VALIDATORS = [
