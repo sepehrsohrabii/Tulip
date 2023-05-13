@@ -111,11 +111,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if DEBUG:
-    SECURE_SSL_REDIRECT = False
-else:
-    SECURE_SSL_REDIRECT = False
-
-if not DEBUG:
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+# if DEBUG:
+#     SECURE_SSL_REDIRECT = False
+# else:
+#     SECURE_SSL_REDIRECT = False
+#
+# if not DEBUG:
+#     SESSION_COOKIE_SECURE = True
+#     CSRF_COOKIE_SECURE = True
