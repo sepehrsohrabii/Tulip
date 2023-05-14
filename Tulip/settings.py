@@ -1,4 +1,3 @@
-import mimetypes
 import os
 from pathlib import Path
 
@@ -8,9 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = False
 
-mimetypes.add_type('text/css', '.css', True)
-mimetypes.add_type('text/html', '.html', True)
-mimetypes.add_type('text/javascript', '.js', True)
+# mimetypes.add_type('text/css', '.css', True)
+# mimetypes.add_type('text/html', '.html', True)
+# mimetypes.add_type('text/javascript', '.js', True)
 
 if DEBUG:
     SECRET_KEY = 'sepisepisepisepisepisepisepisepisep'
