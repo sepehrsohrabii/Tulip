@@ -7,17 +7,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = False
 
-# mimetypes.add_type('text/css', '.css', True)
-# mimetypes.add_type('text/html', '.html', True)
-# mimetypes.add_type('text/javascript', '.js', True)
-
 if DEBUG:
     SECRET_KEY = 'sepisepisepisepisepisepisepisepisep'
 else:
     SECRET_KEY = SECRET_KEY
 
-# ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
+# ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -110,7 +106,6 @@ if DEBUG:
 else:
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-    # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles/'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media_root/')
