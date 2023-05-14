@@ -16,7 +16,8 @@ if DEBUG:
 else:
     SECRET_KEY = SECRET_KEY
 
-ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
+# ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -109,7 +110,7 @@ if DEBUG:
 else:
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles/'),)
+    # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles/'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media_root/')
