@@ -13,7 +13,7 @@ if DEBUG:
 else:
     SECRET_KEY = SECRET_KEY
 
-ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128', '0.0.0.0']
+ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -109,7 +109,9 @@ else:
 
 MEDIA_URL = 'static/media_root/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
+
 mimetypes.add_type('text/css', '.css', True)
+mimetypes.add_type('text/html', '.html', True)
 mimetypes.add_type('text/javascript', '.js', True)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
