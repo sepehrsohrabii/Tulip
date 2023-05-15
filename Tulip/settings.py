@@ -101,7 +101,7 @@ USE_I18N = True
 USE_TZ = True
 
 if DEBUG:
-    STATIC_URL = 'static/static/'
+    STATIC_URL = 'static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 else:
     STATIC_URL = '/static/'
