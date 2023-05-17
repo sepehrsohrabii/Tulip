@@ -3,14 +3,15 @@
 {% block title %}{{ main_product2.title }}{% endblock %}
 {% block main %}
 <!-- Header -->
-<div class="container-fluid bg-img-cover height-483"
+<div class="container-fluid bg-img-cover height-600"
      {% if main_product2.header_bg_img %}
      style="background-image: url({{main_product2.header_bg_img.url}})"
      {% else %}
      style="background-image: url({% static 'img/stone-header-bg.jpg' %})"
      {% endif %}
 >
-	<div class="row justify-content-center h-100 align-items-center py-5 py-md-0 mt-5">
+	<div class="row height-136"></div>
+	<div class="row justify-content-center h-100 align-items-center py-5 py-md-0">
 		<div class="col-12 col-md-3 text-center">
 			{% if main_product2.product_img %}
 			<img src="{{ main_product2.product_img.url }}" height="165px">

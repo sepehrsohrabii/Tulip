@@ -67,7 +67,6 @@ body {
   overflow-x: hidden !important;
   background-color: #f2eae1;
   transition: all 0.5s ease !important;
-  overflow-x: hidden;
   --primary-color: #b79b7e;
   --dark-green: #2E2F2A;
   --secondary-color: #fff6ec;
@@ -76,7 +75,7 @@ body {
 }
 @media (max-width: 768px) {
 	/* MOBILE VIEW */
-	h1 {
+  h1 {
     font-family: "Butler";
     font-size: 32px;
     font-weight: bold;
@@ -270,6 +269,9 @@ body {
 	}
 	.height-850 {
 	  height: 850px;
+	}
+	.height-600 {
+	  height: 600px;
 	}
 	.height-483 {
 	  height: 483px;
