@@ -1,19 +1,14 @@
 import os
 from pathlib import Path
 
-from Tulip.SECRETS import SECRET_KEY, DB_NAME, DB_PASSWORD, DB_USER
+from Tulip.SECRETS import SECRET_KEY, POSTGRES_DB_PASS
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+SECRET_KEY = SECRET_KEY
 DEBUG = False
 
-if DEBUG:
-    SECRET_KEY = 'sepisepisepisepisepisepisepisepisep'
-else:
-    SECRET_KEY = SECRET_KEY
-
-ALLOWED_HOSTS = ['tulipstone.ca', 'localhost', '127.0.0.1', '138.197.128.128']
-# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tulipstone.ca',
+                 'localhost', '127.0.0.1', '147.182.146.162']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,9 +64,9 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': DB_NAME,
-            'USER': DB_USER,
-            'PASSWORD': DB_PASSWORD,
+            'NAME': 'tulipstone',
+            'USER': 'tulipstoneuser',
+            'PASSWORD': POSTGRES_DB_PASS,
             'HOST': 'localhost',
             'PORT': '',
         }
@@ -101,21 +96,21 @@ USE_I18N = True
 USE_TZ = True
 
 if DEBUG:
-    STATIC_URL = 'static/'
+    STATIC_URL = 'static/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 else:
     STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media_root/')
+MEDIA_URL = '/static/media_root/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if DEBUG:
     SECURE_SSL_REDIRECT = False
 else:
-    SECURE_SSL_REDIRECT = False
+    SECURE_SSL_REDIRECT = True
 
 if not DEBUG:
     SESSION_COOKIE_SECURE = True
