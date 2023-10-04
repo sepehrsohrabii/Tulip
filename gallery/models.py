@@ -1,5 +1,6 @@
 import os
 import random
+
 from django.db import models
 
 
@@ -28,10 +29,13 @@ class Item(models.Model):
     status = models.CharField(max_length=50, choices=STATUS, default="True")
     title = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
-    picture = models.ImageField(
-        upload_to=upload_image_path, verbose_name="Picture File", null=True, blank=True
-    )
-    video_url = models.URLField(max_length=200, verbose_name="Video URL", blank=True)
+    picture = models.ImageField(upload_to=upload_image_path,
+                                verbose_name="Picture File",
+                                null=True,
+                                blank=True)
+    video_url = models.URLField(max_length=200,
+                                verbose_name="Video URL",
+                                blank=True)
     create_at = models.DateTimeField(auto_now=True, verbose_name="Created at")
 
     def __str__(self):
