@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Gallery{% endblock %}
+{% block main %}
+<div class="container-fluid">
+    <div class="container">
+        <div class="row pt-md-5">
+            <div class="col-3 pt-md-5 my-5">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-md-4 col-12 align-self-center">
+            <img class="d-none d-md-block" src="{{ current_view.footer_logo.url }}" width="150px">
+            <h2 class="fw-bold text-start mt-2">Gallery</h2>
+            <div class="border-bottom border-1 border-dark mt-1 mb-3"></div>
+            <p class="p1" align="justify">        
+                Welcome to the Tulip Gallery, where we proudly showcase the culmination of over 15 years of expertise in the stone and precast industry. At Tulip, we're committed to turning your ideas into tangible works of art through our fully integrated fabrication system. Our gallery offers a glimpse into our diverse portfolio, which spans from luxurious upscale housing projects to the meticulous restoration of cherished properties.
+            </p>
+        </div>
+        <div class="col-md-7 col-12 mt-5 mt-md-0">
+            <!-- Flickity HTML init -->
+            <div class="carousel carousel-main" data-flickity='{"pageDots": false}'>
+                {% for item in gallery_items %}
+                <div class="carousel-cell w-100">
+                    {% if item.picture %}
+                    <img class="object-fit-cover" width="100%" height="100%" src="{{item.picture.url}}" alt="{{item.title}}">
+                    {% elif item.video_url %}
+                    <!-- The video  -->
+                    <video class="object-fit-cover" src="{{ item.video_url }}" controls width="100%" height="100%"></video>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel carousel-nav mt-3"
+                data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                {% for item in gallery_items %}
+                <div class="carousel-cell">
+                    {% if item.picture %}
+                    <img class="object-fit-cover" width="100%" height="100%" src="{{item.picture.url}}" alt="{{item.title}}">
+                    {% elif item.video_url %}
+                    <!-- The video  -->
+                    <video class="object-fit-cover" src="{{ item.video_url }}" autoplay loop muted playsinline width="100%" height="100%"></video>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-color-dark-green">
+    <div class="container">
+        <div class="row justify-content-between my-5 py-5">
+            <div class="col-md-6 col-12">
+                <video class="object-fit-cover" src="https://drive.google.com/uc?id=1qQxZVHrSkdtZW2l5nIS8DJK6k8pbCM6p" controls width="100%" height="100%"></video>
+            </div>
+            <div class="col-md-5 col-12 align-self-center mt-md-0 mt-5">
+                <img src="{% static 'img/youtube_logo_dark.png' %}" width="150px">
+                <h2 class="fw-bold text-primary-color text-start mt-2">Channel</h2>
+                <div class="border-bottom border-1 mt-1 mb-3"></div>
+                <p class="p1 text-white mb-4" align="justify">        
+                    Welcome to the thrilling world of Tulip on YouTube, where we're turning ordinary into extraordinary, one stunning creation at a time. With over 15 years of stone and precast expertise, our channel is your passport to an exhilarating journey of craftsmanship and innovation. Expect nothing less than a front-row seat to the magic of design, where we transform raw materials into jaw-dropping works of art.
+                </p>
+                <a class="button-2 p1 px-3 py-2" href="#">
+                    <span class="p1 fw-semibold">Subscribe</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+{% endblock %}

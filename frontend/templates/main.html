@@ -59,16 +59,27 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav w-60 justify-content-end">
-                <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
-
-                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/stone/' in request.path %} active{% endif %}" href="/products/stone/">Stone</a>
-                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/precast/' in request.path %} active{% endif %}" href="/products/precast/">Precast</a>
-                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/brick/' in request.path %} active{% endif %}" href="/products/brick/">Brick</a>
-                <a class="col-md text-color-primary text-md-center nav-link {% if '/products/installation-services/' in request.path %} active{% endif %}" href="/products/installation-services/">Installation</a>
-
-                <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'coming_soon' %} active{% endif %}" href="{% url 'coming_soon' %}">Inspiration</a>
-                <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
-                <a class="col-md text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
+                <a class="mx-md-3 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'home_page' %} active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
+                <div class="dropdown">
+                  <a class="mx-md-3 text-color-primary text-md-center nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Products
+                    <i class="bi bi-caret-down-fill"></i>
+                  </a>
+                
+                  <ul class="dropdown-menu rounded-0">
+                    <li><a class="dropdown-item text-color-primary text-md-center nav-link {% if '/products/stone/' in request.path %} active{% endif %}" href="/products/stone/">Stone</a></li>
+                    <li><a class="dropdown-item text-color-primary text-md-center nav-link {% if '/products/precast/' in request.path %} active{% endif %}" href="/products/precast/">Precast</a></li>
+                    <li><a class="dropdown-item text-color-primary text-md-center nav-link {% if '/products/brick/' in request.path %} active{% endif %}" href="/products/brick/">Brick</a></li>
+                  </ul>
+                </div>
+                {% comment %} <a class="mx-md-3 text-color-primary text-md-center nav-link {% if '/products/stone/' in request.path %} active{% endif %}" href="/products/stone/">Stone</a> {% endcomment %}
+                {% comment %} <a class="mx-md-3 text-color-primary text-md-center nav-link {% if '/products/precast/' in request.path %} active{% endif %}" href="/products/precast/">Precast</a> {% endcomment %}
+                {% comment %} <a class="mx-md-3 text-color-primary text-md-center nav-link {% if '/products/brick/' in request.path %} active{% endif %}" href="/products/brick/">Brick</a> {% endcomment %}
+                <a class="mx-md-3 text-color-primary text-md-center nav-link {% if '/products/installation-services/' in request.path %} active{% endif %}" href="/products/installation-services/">Installation</a>
+                <a class="mx-md-3 text-color-primary text-md-center nav-link {% if '/gallery/' in request.path %} active{% endif %}" href="{% url 'gallery_view' %}">Gallery</a>
+                <a class="mx-md-3 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'coming_soon' %} active{% endif %}" href="{% url 'coming_soon' %}">Inspiration</a>
+                <a class="mx-md-3 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'about_us' %} active{% endif %}" href="{% url 'about_us' %}">About Us</a>
+                <a class="mx-md-3 text-color-primary text-md-center nav-link{% if request.resolver_match.url_name == 'contact_page' %} active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
               </div>
             </div>
           </div>

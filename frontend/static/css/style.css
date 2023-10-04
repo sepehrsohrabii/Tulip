@@ -68,13 +68,13 @@ body {
   background-color: #f2eae1;
   transition: all 0.5s ease !important;
   --primary-color: #b79b7e;
-  --dark-green: #2E2F2A;
+  --dark-green: #2e2f2a;
   --secondary-color: #fff6ec;
   --bg-color: #e9e1d8;
   --gray: #808080;
 }
 @media (max-width: 768px) {
-	/* MOBILE VIEW */
+  /* MOBILE VIEW */
   h1 {
     font-family: "Butler";
     font-size: 32px;
@@ -131,16 +131,16 @@ body {
     text-align: center;
   }
   .slider-title {
-	  top: 60%;
-	  left: 5%;
-	  width: 100%;
-	}
+    top: 60%;
+    left: 5%;
+    width: 100%;
+  }
   .slider-subtitle {
-	  top: 79%;
-	  left: 5%;
-	  width: 70%;
-	  font-weight: 500 !important;
-	}
+    top: 79%;
+    left: 5%;
+    width: 70%;
+    font-weight: 500 !important;
+  }
   .row {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -170,14 +170,16 @@ body {
     border: 2px solid var(--dark-green);
   }
 
-  table td, table th {
+  table td,
+  table th {
     display: block;
     text-align: left;
     font-weight: bold;
     border: none;
   }
 
-  table td::before, table th::before {
+  table td::before,
+  table th::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;
@@ -188,16 +190,16 @@ body {
     height: auto;
   }
   /* filicity carousel */
-	.carousel-cell {
-	  height: 150px;
-	  margin-right: 10px;
-	  counter-increment: gallery-cell;
-	  object-fit: cover;
-	  object-position: center;
-	}
+  .carousel-cell-products-gallery {
+    height: 150px;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 @media (min-width: 769px) {
-	/* DESKTOP */
+  /* DESKTOP */
   h1 {
     font-family: "Butler";
     font-size: 72px;
@@ -251,48 +253,48 @@ body {
     font-family: "Butler";
   }
   .slider-title {
-	  top: 30%;
-	  left: 14%;
-	  width: 40%;
-	}
-	.slider-subtitle {
-	  top: 70%;
-	  left: 20%;
-	  width: 15%;
-	  font-weight: 500 !important;
-	}
+    top: 30%;
+    left: 14%;
+    width: 40%;
+  }
+  .slider-subtitle {
+    top: 70%;
+    left: 20%;
+    width: 15%;
+    font-weight: 500 !important;
+  }
   .height-656 {
-	  height: 656px;
-	}
+    height: 656px;
+  }
   .height-999 {
-	  height: 999px;
-	}
-	.height-850 {
-	  height: 850px;
-	}
-	.height-600 {
-	  height: 600px;
-	}
-	.height-483 {
-	  height: 483px;
-	}
-	.height-395 {
-	  height: 395px;
-	}
-	.height-289 {
-	  height: 395px;
-	}
-	.height-136 {
-	  height: 136px;
-	}
-	/* filicity carousel */
-	.carousel-cell {
-	  height: 300px;
-	  margin-right: 10px;
-	  counter-increment: gallery-cell;
-	  object-fit: cover;
-	  object-position: center;
-	}
+    height: 999px;
+  }
+  .height-850 {
+    height: 850px;
+  }
+  .height-600 {
+    height: 600px;
+  }
+  .height-483 {
+    height: 483px;
+  }
+  .height-395 {
+    height: 395px;
+  }
+  .height-289 {
+    height: 395px;
+  }
+  .height-136 {
+    height: 136px;
+  }
+  /* filicity carousel */
+  .carousel-cell-products-gallery {
+    height: 300px;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 /* RESET */
 h1,
@@ -339,7 +341,7 @@ input[type="url"] {
   font-family: "Poppins";
 }
 header {
-	z-index: 10;
+  z-index: 10;
 }
 a {
   text-decoration: none;
@@ -348,10 +350,13 @@ a {
   color: unset !important;
 }
 .vh-90 {
-	height: 90vh !important;
+  height: 90vh !important;
 }
 .mtn-1 {
   margin-top: -26%;
+}
+.mtn-2 {
+  margin-top: -14px;
 }
 .navbar-nav a:hover,
 a:active,
@@ -447,12 +452,12 @@ a.active {
   background-color: var(--dark-green);
   color: white !important;
 }
-.navbar-toggler{
-	background-color: transparent;
-	border-color: var(--primary-color) !important;
+.navbar-toggler {
+  background-color: transparent;
+  border-color: var(--primary-color) !important;
 }
 .w-60 {
-	width: 60%;
+  width: 60%;
 }
 .fw-500 {
   font-weight: 500 !important;
@@ -628,17 +633,6 @@ a.active {
   }
 }
 */
-
-
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
 .sub_product_desc p {
   font-family: "Poppins";
   font-size: 14px;
@@ -654,4 +648,16 @@ a.active {
   bottom: 0;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--bg-color) !important;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
 }
