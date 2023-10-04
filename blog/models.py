@@ -1,7 +1,8 @@
 import os
 import random
-from django.db import models
+
 from ckeditor.fields import RichTextField
+from django.db import models
 from django.urls import reverse
 
 
@@ -28,9 +29,10 @@ class Blog(models.Model):
         ("False", "Not active"),
     )
     status = models.CharField(max_length=50, choices=STATUS, default="True")
-    slug = models.SlugField(
-        verbose_name="link", unique=True, allow_unicode=True, max_length=200
-    )
+    slug = models.SlugField(verbose_name="link",
+                            unique=True,
+                            allow_unicode=True,
+                            max_length=200)
     title = models.CharField(max_length=50)
     short_description = models.TextField(default="")
     description = RichTextField()
