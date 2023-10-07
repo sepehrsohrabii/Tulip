@@ -6,6 +6,8 @@ from frontend.models import Settings
 
 def home_page(request):
     blogs = Blog.objects.filter(status=True).order_by("-create_at")[:3]
+    if len(blogs) != 3:
+        blogs = None
     setting, created = Settings.objects.get_or_create(is_active=True)
     context = {
         "setting": setting,
