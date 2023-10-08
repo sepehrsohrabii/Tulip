@@ -26,7 +26,7 @@
                 {% for item in gallery_items %}
                 <div class="carousel-cell w-100">
                     {% if item.picture %}
-                    <img class="object-fit-cover" width="100%" height="100%" src="{{item.picture.url}}" alt="{{item.title}}">
+                    <img class="object-fit-cover" width="100%" height="420px" src="{{item.picture.url}}" alt="{{item.title}}">
                     {% elif item.video_url %}
                     <!-- The video  -->
                     <video class="object-fit-cover" src="{{ item.video_url }}" controls width="100%" height="100%"></video>
@@ -42,7 +42,7 @@
                     <img class="object-fit-cover" width="100%" height="100%" src="{{item.picture.url}}" alt="{{item.title}}">
                     {% elif item.video_url %}
                     <!-- The video  -->
-                    <video class="object-fit-cover" src="{{ item.video_url }}" autoplay loop muted playsinline width="100%" height="100%"></video>
+                    <video class="object-fit-cover" src="{{ item.video_url }}" muted width="100%" height="100%"></video>
                     {% endif %}
                 </div>
                 {% endfor %}
