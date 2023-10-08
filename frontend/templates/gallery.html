@@ -28,8 +28,8 @@
                     {% if item.picture %}
                     <img class="object-fit-cover" width="100%" height="420px" src="{{item.picture.url}}" alt="{{item.title}}">
                     {% elif item.video_url %}
-                    <!-- The video  -->
-                    <video class="object-fit-cover" src="{{ item.video_url }}" controls width="100%" height="100%"></video>
+                    <!-- Lazy-loaded video with a poster image -->
+                    <video class="object-fit-cover lazy" data-src="{{ item.video_url }}" poster="{% static 'img/video-poster.jpg' %}" controls width="100%" height="420px"></video>
                     {% endif %}
                 </div>
                 {% endfor %}
@@ -39,10 +39,10 @@
                 {% for item in gallery_items %}
                 <div class="carousel-cell">
                     {% if item.picture %}
-                    <img class="object-fit-cover" width="100%" src="{{item.picture.url}}" alt="{{item.title}}">
+                    <img class="object-fit-cover" width="100%" height="100%" src="{{item.picture.url}}" alt="{{item.title}}">
                     {% elif item.video_url %}
-                    <!-- The video  -->
-                    <video class="object-fit-cover" src="{{ item.video_url }}" muted width="100%"></video>
+                    <!-- Lazy-loaded video with a poster image -->
+                    <video class="object-fit-cover lazy" data-src="{{ item.video_url }}" muted width="100%" height="100%"></video>
                     {% endif %}
                 </div>
                 {% endfor %}
@@ -72,4 +72,9 @@
 </div>
 {% endblock %}
 {% block script %}
+document.addEventListener("DOMContentLoaded", function () {
+    var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy",
+    });
+  });
 {% endblock %}
