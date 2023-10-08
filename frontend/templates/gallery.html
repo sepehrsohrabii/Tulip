@@ -39,10 +39,10 @@
                 {% for item in gallery_items %}
                 <div class="carousel-cell">
                     {% if item.picture %}
-                    <img class="object-fit-cover" width="100%" height="100%" src="{{item.picture.url}}" alt="{{item.title}}">
+                    <img class="object-fit-cover" width="100%" src="{{item.picture.url}}" alt="{{item.title}}">
                     {% elif item.video_url %}
                     <!-- The video  -->
-                    <video class="object-fit-cover" src="{{ item.video_url }}" muted width="100%" height="100%"></video>
+                    <video class="object-fit-cover" src="{{ item.video_url }}" muted width="100%"></video>
                     {% endif %}
                 </div>
                 {% endfor %}
