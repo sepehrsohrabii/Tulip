@@ -12,9 +12,7 @@ def contact_page(request):
     if request.method == "POST":
         if form.is_valid():
             contact_save = ContactFormModel()
-            form = ContactForm(request.POST,
-                               instance=contact_save,
-                               auto_id=True)
+            form = ContactForm(request.POST, instance=contact_save, auto_id=True)
             contact = form.save(commit=False)
             contact.save()
     else:

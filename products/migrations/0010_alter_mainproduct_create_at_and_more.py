@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0009_alter_mainproduct_header_bg_img_and_more'),
+        ("products", "0009_alter_mainproduct_header_bg_img_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='mainproduct',
-            name='create_at',
-            field=models.DateTimeField(auto_now=True, verbose_name='Created at'),
+            model_name="mainproduct",
+            name="create_at",
+            field=models.DateTimeField(auto_now=True, verbose_name="Created at"),
         ),
         migrations.AlterField(
-            model_name='mainproduct2',
-            name='create_at',
-            field=models.DateTimeField(auto_now=True, verbose_name='Created at'),
+            model_name="mainproduct2",
+            name="create_at",
+            field=models.DateTimeField(auto_now=True, verbose_name="Created at"),
         ),
         migrations.AlterField(
-            model_name='subproduct',
-            name='create_at',
-            field=models.DateTimeField(auto_now=True, verbose_name='Created at'),
+            model_name="subproduct",
+            name="create_at",
+            field=models.DateTimeField(auto_now=True, verbose_name="Created at"),
         ),
     ]

@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0010_alter_mainproduct_create_at_and_more'),
+        ("products", "0010_alter_mainproduct_create_at_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='subproduct',
-            name='short_description',
-            field=models.TextField(default=''),
+            model_name="subproduct",
+            name="short_description",
+            field=models.TextField(default=""),
         ),
     ]
