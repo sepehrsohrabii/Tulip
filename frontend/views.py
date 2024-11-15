@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from blog.models import Blog
 
+from blog.models import Blog
 from frontend.models import Settings
 
 

@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-from Tulip.SECRETS import SECRET_KEY, POSTGRES_DB_PASS, DEBUG
+from Tulip.SECRETS import DEBUG, POSTGRES_DB_PASS, SECRET_KEY
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY
